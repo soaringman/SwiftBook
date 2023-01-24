@@ -7,25 +7,25 @@
 
 import UIKit
 
-/// #Строитель ячейки для размещения горизонтальной коллекции
+/// #Строитель ячейки курса в процессе прохождения
 final class MyCourseCellBuilder {
     /// Высота ячейки
     private let height: CGFloat
     /// Конфигураторы секций коллекции внутри ячейки
-    private let models: [MyCourseViewModel]
+    private let viewModels: [MyCourseViewModel]
     
-    private weak var delegate: MainScreenPresentation?
+    private weak var delegate: StudyContinuing?
 
     init(height: CGFloat,
-         models: [MyCourseViewModel],
-         delegate: MainScreenPresentation?) {
+         viewModels: [MyCourseViewModel],
+         delegate: StudyContinuing?) {
         self.height = height
-        self.models = models
+        self.viewModels = viewModels
         self.delegate = delegate
     }
 }
 
-// MARK: - CVItemBuilderProtocol
+// MARK: - TVCellBuilderProtocol
 extension MyCourseCellBuilder: TVCellBuilderProtocol {
     func register(tableView: UITableView) {
         tableView.register(MyCourseCell.self)
@@ -33,14 +33,15 @@ extension MyCourseCellBuilder: TVCellBuilderProtocol {
     
     func cellHeight() -> CGFloat { height }
     
-    func cellCount() -> Int { models.count }
+    func cellCount() -> Int { viewModels.count }
     
     func cellAt(tableView: UITableView,
                 indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(MyCourseCell.self,
                                                  indexPath: indexPath)
-//        cell.delegate = delegate
-//        cell.configure(with: models)
+        let viewModel = viewModels[indexPath.row]
+        cell.delegate = delegate
+        cell.configure(with: viewModel)
         return cell
     }
 }

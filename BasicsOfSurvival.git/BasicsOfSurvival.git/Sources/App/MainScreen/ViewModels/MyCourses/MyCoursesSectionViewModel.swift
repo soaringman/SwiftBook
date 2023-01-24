@@ -1,19 +1,16 @@
 //
-//  CardSectionViewModel.swift
-//  BasicsOfSurvival
+//  MyCoursesSectionViewModel.swift
+//  BasicsOfSurvival.git
 //
-//  Created by Владимир Рубис on 23.01.2023.
+//  Created by Владимир Рубис on 24.01.2023.
 //
-
-import Foundation
 
 /// #Вью модель секции с карточками курсов
-struct CardSectionViewModel {
+struct MyCoursesSectionViewModel {
     /// Название секции
     var titleSection: String
     /// Название кнопки в заголовке
     var titleHeaderButton: String?
     /// Вью модели карточек
-    var models: [CardViewModel]
+    var viewModels: [MyCourseViewModel]
 }
-

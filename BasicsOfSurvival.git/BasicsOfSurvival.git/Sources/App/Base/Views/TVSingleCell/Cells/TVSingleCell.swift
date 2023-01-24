@@ -13,7 +13,7 @@ final class TVSingleCell: TVBaseCell {
     /// Делегат нажатия на ячейку
     weak var delegate: CellSelectable?
     /// Адаптер для конфигурации внутренней коллекции
-    private var recipeListAdapter: CVAdapter?
+    private var adapter: CVAdapter?
     /// Внутренняя коллекция
     private lazy var collectionView: UICollectionView = {
         let layout = TVSingleCell.setupLayout()
@@ -30,17 +30,17 @@ final class TVSingleCell: TVBaseCell {
     override func setupCell() {
         backgroundColor = .clear
         
-        recipeListAdapter = CVAdapter()
-        collectionView.dataSource = recipeListAdapter
-        collectionView.delegate = recipeListAdapter
-        collectionView.register(CardCollectionViewCell.self)
+        adapter = CVAdapter()
+        collectionView.dataSource = adapter
+        collectionView.delegate = adapter
         
         setupConstraints()
     }
     
     /// Конфигурирует внутреннюю коллекцию по переданному массиву моделей
     func configure(with builders: [CVItemBuilderProtocol]) {
-        recipeListAdapter?.configure(with: builders)
+        builders.forEach { $0.register(collectionView: collectionView) }
+        adapter?.configure(with: builders)
         collectionView.reloadData()
     }
 

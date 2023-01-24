@@ -13,3 +13,10 @@ protocol CellSelectable: AnyObject {
     ///  - Parameter id: идентификатор
     func didSelectItem(id: Int)
 }
+
+/// #Протокол передачи UI-ивента при нажатии на кнопку продолжения обучения
+protocol StudyContinuing: AnyObject {
+    /// Нажата кнопка продолжить обучение
+    /// - Parameter id: идентификатор
+    func didTapContinueStudyButton(id: Int)
+}

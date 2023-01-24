@@ -8,7 +8,7 @@
 import UIKit
 
 /// #Вью Карточки курса
-final class CardView: UIView {
+final class CardView: BaseView {
     // MARK: - Properties
     /// Вью для изображения карточки курса
     private lazy var cardImageView: UIImageView = {
@@ -49,18 +49,6 @@ final class CardView: UIView {
         return stack
     }()
     
-    // MARK: - Init & Override
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-
-        setupView()
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
     // MARK: - Functions
     func configure(with model: CardViewModel) {
         progressView.configure(with: model.percentageProgress)
@@ -75,8 +63,7 @@ final class CardView: UIView {
         }
     }
     
-    /// Настройка view
-    private func setupView() {
+    override func setupView() {
         [numberOfTopicsLabel, numberOfTestsLabel, totalTimeLabel].forEach {
             $0.textAlignment = .center
             $0.layer.cornerRadius = 10

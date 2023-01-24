@@ -7,10 +7,11 @@
 
 import UIKit
 
+/// #Ячейка карточки курса в процессе прохождения
 final class MyCourseCell: TVBaseCell {
     // MARK: - Properties
     /// Делегат 
-    weak var delegate: MainScreenPresentation?
+    weak var delegate: StudyContinuing?
     /// Вью курса
     private lazy var myCourseView: MyCourseView = {
         var view = MyCourseView()
@@ -19,17 +20,16 @@ final class MyCourseCell: TVBaseCell {
     }()
     
     // MARK: - Functions
-    /// Настройка ячейки
     override func setupCell() {
         backgroundColor = .clear
-
+        
         setupConstraints()
     }
     
     /// Конфигурирует вью
     func configure(with model: MyCourseViewModel) {
         let action: (() -> Void)? = { [weak self] in
-            self?.delegate?.didTapContinueLearningButton(id: model.id)
+            self?.delegate?.didTapContinueStudyButton(id: model.id)
         }
         myCourseView.configure(with: model,
                                action: action)

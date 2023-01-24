@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// #Строитель ячеек секции Card
+/// #Строитель ячеек секции CardSection
 final class CardItemBuilder {
     /// Вью модели карточек курсов
     private let viewModels: [CardViewModel]
@@ -21,11 +21,11 @@ final class CardItemBuilder {
     }
 }
 
-// MARK: - RecommendedItemBuilder
+// MARK: - CVSelectableItemBuilderProtocol
 extension CardItemBuilder: CVSelectableItemBuilderProtocol {
 
     func register(collectionView: UICollectionView) {
-        collectionView.register(CardCollectionViewCell.self)
+        collectionView.register(CardCell.self)
     }
 
     func itemCount() -> Int { viewModels.count }
@@ -37,7 +37,7 @@ extension CardItemBuilder: CVSelectableItemBuilderProtocol {
     
     func cellAt(indexPath: IndexPath,
                 collectionView: UICollectionView) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(CardCollectionViewCell.self,
+        let cell = collectionView.dequeueReusableCell(CardCell.self,
                                                       indexPath: indexPath)
         let viewModel = viewModels[indexPath.item]
         cell.configure(with: viewModel)

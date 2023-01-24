@@ -28,7 +28,7 @@
 		7D8F0945297FC299007226D1 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0925297FC298007226D1 /* CardViewModel.swift */; };
 		7D8F0946297FC299007226D1 /* CardSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0926297FC298007226D1 /* CardSectionViewModel.swift */; };
 		7D8F0948297FC299007226D1 /* TVSingleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F092B297FC299007226D1 /* TVSingleCell.swift */; };
-		7D8F0949297FC299007226D1 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F092E297FC299007226D1 /* CardCollectionViewCell.swift */; };
+		7D8F0949297FC299007226D1 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F092E297FC299007226D1 /* CardCell.swift */; };
 		7D8F094A297FC299007226D1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0930297FC299007226D1 /* CardView.swift */; };
 		7D8F094B297FC299007226D1 /* RingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0931297FC299007226D1 /* RingProgressView.swift */; };
 		7D8F094C297FC299007226D1 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0932297FC299007226D1 /* PaddingLabel.swift */; };
@@ -49,6 +49,9 @@
 		7D8F097929801282007226D1 /* MyCourseCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F097829801282007226D1 /* MyCourseCellBuilder.swift */; };
 		7D8F097B2980161F007226D1 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F097A2980161F007226D1 /* AppConstants.swift */; };
 		7D8F0980298063E3007226D1 /* TVSingleCellSectionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F097F298063E3007226D1 /* TVSingleCellSectionConfigurator.swift */; };
+		7D8F098229807400007226D1 /* MyCourseSectionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F098129807400007226D1 /* MyCourseSectionConfigurator.swift */; };
+		7D8F098429807618007226D1 /* MyCoursesSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F098329807618007226D1 /* MyCoursesSectionViewModel.swift */; };
+		7D8F098829807D63007226D1 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F098729807D63007226D1 /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +97,7 @@
 		7D8F0925297FC298007226D1 /* CardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		7D8F0926297FC298007226D1 /* CardSectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSectionViewModel.swift; sourceTree = "<group>"; };
 		7D8F092B297FC299007226D1 /* TVSingleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVSingleCell.swift; sourceTree = "<group>"; };
-		7D8F092E297FC299007226D1 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		7D8F092E297FC299007226D1 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		7D8F0930297FC299007226D1 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		7D8F0931297FC299007226D1 /* RingProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingProgressView.swift; sourceTree = "<group>"; };
 		7D8F0932297FC299007226D1 /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
@@ -115,6 +118,9 @@
 		7D8F097829801282007226D1 /* MyCourseCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseCellBuilder.swift; sourceTree = "<group>"; };
 		7D8F097A2980161F007226D1 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		7D8F097F298063E3007226D1 /* TVSingleCellSectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVSingleCellSectionConfigurator.swift; sourceTree = "<group>"; };
+		7D8F098129807400007226D1 /* MyCourseSectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseSectionConfigurator.swift; sourceTree = "<group>"; };
+		7D8F098329807618007226D1 /* MyCoursesSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesSectionViewModel.swift; sourceTree = "<group>"; };
+		7D8F098729807D63007226D1 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				7D8F096F29801176007226D1 /* SectionConfigurator */,
-				7D8F0913297FC298007226D1 /* Cells */,
+				7D8F0913297FC298007226D1 /* Views */,
 				7D8F0915297FC298007226D1 /* Builders */,
 				7D8F0917297FC298007226D1 /* Adapters */,
 				7D8F091A297FC298007226D1 /* Headers */,
@@ -210,13 +216,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		7D8F0913297FC298007226D1 /* Cells */ = {
+		7D8F0913297FC298007226D1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				7D8F0929297FC299007226D1 /* TVSingleCell */,
 				7D8F0914297FC298007226D1 /* TVBaseCell.swift */,
+				7D8F098729807D63007226D1 /* BaseView.swift */,
 			);
-			path = Cells;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7D8F0915297FC298007226D1 /* Builders */ = {
@@ -281,9 +288,8 @@
 		7D8F0924297FC298007226D1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				7D8F0925297FC298007226D1 /* CardViewModel.swift */,
-				7D8F0926297FC298007226D1 /* CardSectionViewModel.swift */,
-				7D8F096D29800D02007226D1 /* MyCourseViewModel.swift */,
+				7D8F098529807664007226D1 /* Card */,
+				7D8F09862980766D007226D1 /* MyCourses */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -291,7 +297,8 @@
 		7D8F0927297FC298007226D1 /* CardSection */ = {
 			isa = PBXGroup;
 			children = (
-				7D8F092C297FC299007226D1 /* CollectionView */,
+				7D8F092D297FC299007226D1 /* Cells */,
+				7D8F0933297FC299007226D1 /* Builders */,
 			);
 			path = CardSection;
 			sourceTree = "<group>";
@@ -314,19 +321,10 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		7D8F092C297FC299007226D1 /* CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				7D8F092D297FC299007226D1 /* Cells */,
-				7D8F0933297FC299007226D1 /* Builders */,
-			);
-			path = CollectionView;
-			sourceTree = "<group>";
-		};
 		7D8F092D297FC299007226D1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				7D8F092E297FC299007226D1 /* CardCollectionViewCell.swift */,
+				7D8F092E297FC299007226D1 /* CardCell.swift */,
 				7D8F092F297FC299007226D1 /* CardView */,
 			);
 			path = Cells;
@@ -402,7 +400,7 @@
 				7D8F0955297FC34D007226D1 /* Controller */,
 				7D8F0937297FC299007226D1 /* Factory */,
 				7D8F0927297FC298007226D1 /* CardSection */,
-				7D8F096A29800BA3007226D1 /* MyCourses */,
+				7D8F096A29800BA3007226D1 /* MyCoursesSection */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -448,13 +446,13 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
-		7D8F096A29800BA3007226D1 /* MyCourses */ = {
+		7D8F096A29800BA3007226D1 /* MyCoursesSection */ = {
 			isa = PBXGroup;
 			children = (
 				7D8F0972298011C7007226D1 /* Cells */,
 				7D8F0973298011CD007226D1 /* Builders */,
 			);
-			path = MyCourses;
+			path = MyCoursesSection;
 			sourceTree = "<group>";
 		};
 		7D8F096F29801176007226D1 /* SectionConfigurator */ = {
@@ -470,6 +468,7 @@
 			children = (
 				7D8F097629801260007226D1 /* MyCourseCell.swift */,
 				7D8F097C29803509007226D1 /* MyCourseView */,
+				7D8F098129807400007226D1 /* MyCourseSectionConfigurator.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -488,6 +487,24 @@
 				7D8F09742980122D007226D1 /* MyCourseView.swift */,
 			);
 			path = MyCourseView;
+			sourceTree = "<group>";
+		};
+		7D8F098529807664007226D1 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				7D8F0925297FC298007226D1 /* CardViewModel.swift */,
+				7D8F0926297FC298007226D1 /* CardSectionViewModel.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		7D8F09862980766D007226D1 /* MyCourses */ = {
+			isa = PBXGroup;
+			children = (
+				7D8F096D29800D02007226D1 /* MyCourseViewModel.swift */,
+				7D8F098329807618007226D1 /* MyCoursesSectionViewModel.swift */,
+			);
+			path = MyCourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -627,6 +644,7 @@
 				7D8F09712980118F007226D1 /* SectionConfigurator.swift in Sources */,
 				7D8F0945297FC299007226D1 /* CardViewModel.swift in Sources */,
 				7D8F09752980122D007226D1 /* MyCourseView.swift in Sources */,
+				7D8F098829807D63007226D1 /* BaseView.swift in Sources */,
 				7D8F097929801282007226D1 /* MyCourseCellBuilder.swift in Sources */,
 				7D8F093D297FC299007226D1 /* CVAdapter.swift in Sources */,
 				7D8F0963297FD45C007226D1 /* MainScreenAssembly.swift in Sources */,
@@ -635,7 +653,7 @@
 				7D8F095C297FC39E007226D1 /* MainScreenPresenter.swift in Sources */,
 				7D8F093E297FC299007226D1 /* TVAdapter.swift in Sources */,
 				7D8F0968297FD53A007226D1 /* MainScreenRouter.swift in Sources */,
-				7D8F0949297FC299007226D1 /* CardCollectionViewCell.swift in Sources */,
+				7D8F0949297FC299007226D1 /* CardCell.swift in Sources */,
 				7D8F0943297FC299007226D1 /* TableViewSectionProtocols.swift in Sources */,
 				7D8F0946297FC299007226D1 /* CardSectionViewModel.swift in Sources */,
 				7D8F097B2980161F007226D1 /* AppConstants.swift in Sources */,
@@ -653,7 +671,9 @@
 				7D8F0939297FC299007226D1 /* UICollectionView + Extension.swift in Sources */,
 				7D8F093C297FC299007226D1 /* TVSectionBuilder.swift in Sources */,
 				7D8F0965297FD472007226D1 /* Assemblying.swift in Sources */,
+				7D8F098229807400007226D1 /* MyCourseSectionConfigurator.swift in Sources */,
 				7D8F097729801260007226D1 /* MyCourseCell.swift in Sources */,
+				7D8F098429807618007226D1 /* MyCoursesSectionViewModel.swift in Sources */,
 				7D8F093A297FC299007226D1 /* UITableView + Extension.swift in Sources */,
 				7D8F094B297FC299007226D1 /* RingProgressView.swift in Sources */,
 				7D8F095E297FC4E2007226D1 /* PresentationProtocols.swift in Sources */,

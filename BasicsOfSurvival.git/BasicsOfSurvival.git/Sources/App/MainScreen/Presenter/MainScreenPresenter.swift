@@ -9,8 +9,10 @@ import Foundation
 
 /// #Варианты секций для главного экрана
 enum MainScreenSections {
-    /// секция с коллекцией карточек
+    /// секция с коллекцией карточек курсов
     case cards(CardSectionViewModel)
+    /// секция с курсами находящимися в процессе прохождения
+    case myCourses(MyCoursesSectionViewModel)
 }
 
 /// #Протокол управления View-слоем модуля MainScreen
@@ -38,7 +40,7 @@ final class MainScreenPresenter {
 
 // MARK: - MainScreenPresentation
 extension MainScreenPresenter: MainScreenPresentation {
-    func didTapContinueLearningButton(id: Int) {
+    func didTapContinueStudyButton(id: Int) {
         /// Обработка
     }
     

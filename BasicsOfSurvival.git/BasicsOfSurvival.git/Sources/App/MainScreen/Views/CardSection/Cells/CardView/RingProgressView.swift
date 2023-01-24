@@ -8,7 +8,7 @@
 import UIKit
 
 /// #Вью показывающая успеваемость
-final class RingProgressView: UIView {
+final class RingProgressView: BaseView {
     // MARK: - Properties
     /// Процент успеваемости
     private var percent = 50
@@ -40,12 +40,6 @@ final class RingProgressView: UIView {
     }()
     
     // MARK: - Init & Override
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupView()
-    }
-    
     /// Дополнительный инициализатор для настройки прогресс-линии
     convenience init(borderWidth: CGFloat,
                      primaryColor: UIColor,
@@ -56,10 +50,6 @@ final class RingProgressView: UIView {
         self.secondaryColor = secondaryWidth
         
         setupView()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     override func draw(_ rect: CGRect) {
@@ -77,6 +67,11 @@ final class RingProgressView: UIView {
     func configure(with percent: Int) {
         persantageLabel.text = "\(percent)%"
         self.percent = percent
+    }
+    
+    override func setupView() {
+        backgroundColor = .clear
+        setupConstraints()
     }
     
     /// Рисует изображение в виде кольца для view
@@ -117,10 +112,8 @@ final class RingProgressView: UIView {
         path.stroke()
     }
     
-    /// Настройка view
-    private func setupView() {
-        backgroundColor = .clear
-        
+    /// Настройка констрейнтов
+    private func setupConstraints() {
         addSubview(blurView)
         addSubview(persantageLabel)
         

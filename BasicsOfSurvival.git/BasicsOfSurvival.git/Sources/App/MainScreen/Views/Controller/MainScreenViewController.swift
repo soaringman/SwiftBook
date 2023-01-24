@@ -8,14 +8,13 @@
 import UIKit
 
 /// #Протокол передачи UI-ивентов слою презентации
-protocol MainScreenPresentation: CellSelectable {
+protocol MainScreenPresentation: CellSelectable,
+                                 StudyContinuing {
     /// Нажата кнопка в заголовке
     /// - Parameter section: секция
     func didTapHeaderButton(section: Int)
-    /// Нажата кнопка продолжить обучение
-    /// - Parameter id: идентификатор курса
-    func didTapContinueLearningButton(id: Int)
 }
+
 
 /// #Контроллер главного экрана (В РАБОТЕ)
 final class MainScreenViewController: UIViewController {
@@ -26,6 +25,7 @@ final class MainScreenViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -58,12 +58,24 @@ final class MainScreenViewController: UIViewController {
                                       imageName: "mockImage")
         
         let array = [cardModel, cardModel, cardModel]
-        let viewModels = [CardSectionViewModel(titleSection: "Местность", titleHeaderButton: "Все", models: array),
-                          CardSectionViewModel(titleSection: "Природные условия", titleHeaderButton: "Все", models: array),
-                          CardSectionViewModel(titleSection: "Экстреимальные ситуации", titleHeaderButton: "Все", models: array)]
+        let viewModels = [CardSectionViewModel(titleSection: "Местность", titleHeaderButton: "Все", viewModels: array),
+                          CardSectionViewModel(titleSection: "Природные условия", titleHeaderButton: "Все", viewModels: array),
+                          CardSectionViewModel(titleSection: "Экстреимальные ситуации", titleHeaderButton: "Все", viewModels: array)]
         
-        let sections = viewModels.map { MainScreenSections.cards($0) }
+        var sections = viewModels.map { MainScreenSections.cards($0) }
         
+        let model = MyCourseViewModel(id: 432,
+                                      courseName: "Алтай",
+                                      shortDescription: "Такой какой есть",
+                                      totalTests: 20,
+                                      passedTests: 7,
+                                      imageName: "mockImage")
+        let myCourseViewModels = [model, model]
+        let myCoursesSectionViewModel = MyCoursesSectionViewModel(titleSection: "Мои курсы",
+                                                         titleHeaderButton: "Все",
+                                                         viewModels: myCourseViewModels)
+        let myCoursesSection = MainScreenSections.myCourses(myCoursesSectionViewModel)
+        sections.append(myCoursesSection)
         
         factory = MainScreenFactory(tableView: tableView,
                                     sections: sections,

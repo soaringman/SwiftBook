@@ -1,5 +1,5 @@
 //
-//  CardCollectionViewCell.swift
+//  CardCell.swift
 //  BasicsOfSurvival
 //
 //  Created by Владимир Рубис on 19.01.2023.
@@ -8,7 +8,7 @@
 import UIKit
 
 /// #Ячейка коллекции с карточкой курса
-final class CardCollectionViewCell: UICollectionViewCell {
+final class CardCell: UICollectionViewCell {
     /// Карточка курса
     private lazy var cardView = CardView()
     
