@@ -52,7 +52,7 @@ final class MainScreenViewController: UIViewController {
                                       numberOfTests: "15 тестов",
                                       totalTime: "1ч 48мин",
                                       percentageProgress: 70,
-                                      imageName: "Altai")
+                                      imageName: "mockImage")
         
         let array = [cardModel, cardModel, cardModel]
         let viewModels = [CardSectionViewModel(titleSection: "Местность", titleHeaderButton: "Все", models: array),

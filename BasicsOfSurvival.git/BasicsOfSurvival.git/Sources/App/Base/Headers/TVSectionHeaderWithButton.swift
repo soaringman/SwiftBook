@@ -20,6 +20,7 @@ final class TVSectionHeaderWithButton: UIView {
         let label = UILabel()
         label.font = Fonts.subtitle
         label.textColor = .black
+        label.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -32,16 +33,9 @@ final class TVSectionHeaderWithButton: UIView {
         button.addTarget(self,
                          action: #selector(changeLayoutButtonTapped),
                          for: .touchUpInside)
+        button.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
-    }()
-
-    /// Контейнер для элементов
-    private lazy var container: UIStackView = {
-        let stack = UIStackView()
-        stack.spacing = 8
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        return stack
     }()
 
     // MARK: - Init
@@ -77,20 +71,23 @@ final class TVSectionHeaderWithButton: UIView {
     
     /// Настраивает констрейнты
     private func setupConstraints() {
-        addSubview(container)
-        container.addArrangedSubview(titleSectionLabel)
-        container.addArrangedSubview(headerButton)
+        addSubview(titleSectionLabel)
+        addSubview(headerButton)
 
         let padding: CGFloat = 16
 
         NSLayoutConstraint.activate([
-            container.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor, constant: padding),
-            container.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -padding),
-            container.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor),
-            container.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor)
+            titleSectionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
+            titleSectionLabel.trailingAnchor.constraint(equalTo: headerButton.leadingAnchor, constant: -padding / 2),
+            titleSectionLabel.topAnchor.constraint(equalTo: topAnchor),
+            titleSectionLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            headerButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
+            headerButton.topAnchor.constraint(equalTo: titleSectionLabel.topAnchor),
+            headerButton.bottomAnchor.constraint(equalTo: titleSectionLabel.bottomAnchor)
         ])
     }
-
+    
     /// Нажали на кнопку
     @objc private func changeLayoutButtonTapped() {
         guard let action = action,

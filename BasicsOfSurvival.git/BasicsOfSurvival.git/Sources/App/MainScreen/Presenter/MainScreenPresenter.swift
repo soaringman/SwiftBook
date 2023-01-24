@@ -24,7 +24,7 @@ protocol MainScreenRouting {
     
 }
 
-
+// MARK: - Presenter
 /// #Слой презентации модуля MainScreen
 final class MainScreenPresenter {
     

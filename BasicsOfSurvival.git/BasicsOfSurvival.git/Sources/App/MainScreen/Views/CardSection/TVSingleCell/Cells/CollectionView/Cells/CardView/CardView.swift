@@ -86,7 +86,6 @@ final class CardView: UIView {
             $0.textColor = .white
             container.addArrangedSubview($0)
         }
-        
         setupConstraints()
     }
     

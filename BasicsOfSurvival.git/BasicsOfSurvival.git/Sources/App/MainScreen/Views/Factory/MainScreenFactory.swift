@@ -57,6 +57,7 @@ final class MainScreenFactory {
         case .cards(let viewModel):
             let action: ((Int) -> Void)? = { [weak self] section in
                 self?.delegate?.didTapHeaderButton(section: section)
+                print("didTapHeaderButton")
             }
             return CardSectionConfigurator(viewModels: viewModel.models,
                                            titleSection: viewModel.titleSection,
