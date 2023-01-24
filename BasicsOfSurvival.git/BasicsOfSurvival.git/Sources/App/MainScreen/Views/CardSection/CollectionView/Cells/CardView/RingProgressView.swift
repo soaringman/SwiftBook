@@ -1,5 +1,5 @@
 //
-//  ProgressView.swift
+//  RingProgressView.swift
 //  BasicsOfSurvival
 //
 //  Created by Владимир Рубис on 19.01.2023.
@@ -8,7 +8,7 @@
 import UIKit
 
 /// #Вью показывающая успеваемость
-final class ProgressView: UIView {
+final class RingProgressView: UIView {
     // MARK: - Properties
     /// Процент успеваемости
     private var percent = 50

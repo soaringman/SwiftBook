@@ -31,8 +31,8 @@ final class CardView: UIView {
     }()
     
     /// Прогресс вью
-    private lazy var progressView: ProgressView = {
-        let view = ProgressView()
+    private lazy var progressView: RingProgressView = {
+        let view = RingProgressView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -81,7 +81,7 @@ final class CardView: UIView {
             $0.textAlignment = .center
             $0.layer.cornerRadius = 10
             $0.clipsToBounds = true
-            $0.font = Fonts.main
+            $0.font = Fonts.annotation
             $0.backgroundColor = #colorLiteral(red: 0.2745098039, green: 0.2978057265, blue: 0.2777234018, alpha: 0.9)
             $0.textColor = .white
             container.addArrangedSubview($0)

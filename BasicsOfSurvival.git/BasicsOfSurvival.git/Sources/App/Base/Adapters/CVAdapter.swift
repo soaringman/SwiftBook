@@ -1,5 +1,5 @@
 //
-//  CVCardAdapter.swift
+//  CVAdapter.swift
 //  BasicsOfSurvival
 //
 //  Created by Владимир Рубис on 23.01.2023.
@@ -8,7 +8,7 @@
 import UIKit
 
 /// #Адаптер для горизонтального CollectionView без заголовка
-final class CVCardAdapter: NSObject {
+final class CVAdapter: NSObject {
     private var builders: [CVItemBuilderProtocol] = []
 
     func configure(with sections: [CVItemBuilderProtocol]) {
@@ -17,7 +17,7 @@ final class CVCardAdapter: NSObject {
 }
 
 // MARK: - UICollectionViewDataSource
-extension CVCardAdapter: UICollectionViewDataSource {
+extension CVAdapter: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         builders.count
     }
@@ -35,7 +35,7 @@ extension CVCardAdapter: UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegate
-extension CVCardAdapter: UICollectionViewDelegateFlowLayout {
+extension CVAdapter: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         /// Для ячеек с расширенной функциональностью

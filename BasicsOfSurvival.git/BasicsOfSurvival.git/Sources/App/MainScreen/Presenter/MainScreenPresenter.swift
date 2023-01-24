@@ -38,6 +38,10 @@ final class MainScreenPresenter {
 
 // MARK: - MainScreenPresentation
 extension MainScreenPresenter: MainScreenPresentation {
+    func didTapContinueLearningButton(id: Int) {
+        /// Обработка
+    }
+    
     func didTapHeaderButton(section: Int) {
         /// Обработка
     }

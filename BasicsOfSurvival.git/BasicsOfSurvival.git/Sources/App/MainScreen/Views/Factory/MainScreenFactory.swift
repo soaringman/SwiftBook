@@ -59,13 +59,18 @@ final class MainScreenFactory {
                 self?.delegate?.didTapHeaderButton(section: section)
                 print("didTapHeaderButton")
             }
-            return CardSectionConfigurator(viewModels: viewModel.models,
-                                           titleSection: viewModel.titleSection,
-                                           titleButton: viewModel.titleHeaderButton,
-                                           heightCell: Constants.heightCardSection,
-                                           heightHeader: Constants.heightHeader,
-                                           action: action,
-                                           delegate: delegate).configure(for: tableView)
+            
+            let headerModel = HeaderSectionModel(titleSection: viewModel.titleSection,
+                                                 titleButton: viewModel.titleHeaderButton,
+                                                 heightHeader: Constants.heightHeader,
+                                                 action: action)
+            
+            let builders = [CardItemBuilder(viewModels: viewModel.models,
+                                            delegate: delegate)]
+            
+            return TVSingleCellSectionConfigurator(builders: builders,
+                                                   heightCell: Constants.heightCardSection,
+                                                   headerModel: headerModel).configure(for: tableView)
         }
     }
 }

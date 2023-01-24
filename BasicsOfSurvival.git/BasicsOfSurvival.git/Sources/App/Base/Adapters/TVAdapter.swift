@@ -9,47 +9,41 @@ import UIKit
 
 /// #Адаптер для TableView
 final class TVAdapter: NSObject {
-    private var viewModels: [TVSectionProtocol] = [] {
+    private var sections: [TVSectionProtocol] = [] {
         didSet {
             tableView?.reloadData()
         }
     }
-    
     private weak var tableView: UITableView?
     
     init(tableView: UITableView?) {
         self.tableView = tableView
     }
     
-    func configure(with viewModels: [TVSectionProtocol]) {
-        guard let tableView = tableView else { return }
-        
-        viewModels.forEach {
-            $0.cellBuilder.register(tableView: tableView)
-        }
-        self.viewModels = viewModels
+    func configure(with sections: [TVSectionProtocol]) {
+        self.sections = sections
     }
 }
 
 // MARK: - UITableViewDataSource
 extension TVAdapter: UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int { viewModels.count }
+    func numberOfSections(in tableView: UITableView) -> Int { sections.count }
     
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        viewModels[section].cellBuilder.cellCount()
+        sections[section].cellBuilder.cellCount()
     }
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        viewModels[indexPath.section].cellBuilder.cellAt(tableView: tableView,
+        sections[indexPath.section].cellBuilder.cellAt(tableView: tableView,
                                                          indexPath: indexPath)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let headerBuilder = viewModels[section].headerBuilder else { return nil }
+        guard let headerBuilder = sections[section].headerBuilder else { return nil }
         
         return headerBuilder.viewForHeaderInSection(tableView: tableView,
                                                                  section: section)
@@ -60,12 +54,12 @@ extension TVAdapter: UITableViewDataSource {
 extension TVAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
-        viewModels[indexPath.section].cellBuilder.cellHeight()
+        sections[indexPath.section].cellBuilder.cellHeight()
     }
     
     func tableView(_ tableView: UITableView,
                    heightForHeaderInSection section: Int) -> CGFloat {
-        guard let headerBuilder = viewModels[section].headerBuilder else { return 0 }
+        guard let headerBuilder = sections[section].headerBuilder else { return 0 }
         
         return headerBuilder.headerHeight()
     }

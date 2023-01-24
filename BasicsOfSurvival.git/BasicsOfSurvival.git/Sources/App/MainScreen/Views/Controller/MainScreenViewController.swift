@@ -12,6 +12,9 @@ protocol MainScreenPresentation: CellSelectable {
     /// Нажата кнопка в заголовке
     /// - Parameter section: секция
     func didTapHeaderButton(section: Int)
+    /// Нажата кнопка продолжить обучение
+    /// - Parameter id: идентификатор курса
+    func didTapContinueLearningButton(id: Int)
 }
 
 /// #Контроллер главного экрана (В РАБОТЕ)

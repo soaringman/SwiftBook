@@ -13,7 +13,7 @@ final class TVSingleCell: TVBaseCell {
     /// Делегат нажатия на ячейку
     weak var delegate: CellSelectable?
     /// Адаптер для конфигурации внутренней коллекции
-    private var recipeListAdapter: CVCardAdapter?
+    private var recipeListAdapter: CVAdapter?
     /// Внутренняя коллекция
     private lazy var collectionView: UICollectionView = {
         let layout = TVSingleCell.setupLayout()
@@ -30,7 +30,7 @@ final class TVSingleCell: TVBaseCell {
     override func setupCell() {
         backgroundColor = .clear
         
-        recipeListAdapter = CVCardAdapter()
+        recipeListAdapter = CVAdapter()
         collectionView.dataSource = recipeListAdapter
         collectionView.delegate = recipeListAdapter
         collectionView.register(CardCollectionViewCell.self)
@@ -39,11 +39,8 @@ final class TVSingleCell: TVBaseCell {
     }
     
     /// Конфигурирует внутреннюю коллекцию по переданному массиву моделей
-    func configure(with models: [CardViewModel]) {
-        let builders = CardItemBuilder(width: Constants.widthCardItem,
-                                       viewModels: models,
-                                       delegate: delegate)
-        recipeListAdapter?.configure(with: [builders])
+    func configure(with builders: [CVItemBuilderProtocol]) {
+        recipeListAdapter?.configure(with: builders)
         collectionView.reloadData()
     }
 
@@ -73,9 +70,5 @@ private extension TVSingleCell {
         layout.minimumLineSpacing = padding
         layout.scrollDirection = .horizontal
         return layout
-    }
-    
-    struct Constants {
-        static let widthCardItem: CGFloat = 300
     }
 }

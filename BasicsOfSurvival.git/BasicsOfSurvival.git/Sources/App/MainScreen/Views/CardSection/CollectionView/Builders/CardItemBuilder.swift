@@ -9,17 +9,13 @@ import UIKit
 
 /// #Строитель ячеек секции Card
 final class CardItemBuilder {
-    /// Ширина item
-    private let width: CGFloat
     /// Вью модели карточек курсов
     private let viewModels: [CardViewModel]
 
     weak var delegate: CellSelectable?
     
-    init(width: CGFloat,
-         viewModels: [CardViewModel],
+    init(viewModels: [CardViewModel],
          delegate: CellSelectable?) {
-        self.width = width
         self.viewModels = viewModels
         self.delegate = delegate
     }
@@ -35,10 +31,10 @@ extension CardItemBuilder: CVSelectableItemBuilderProtocol {
     func itemCount() -> Int { viewModels.count }
 
     func itemSize(indexPath: IndexPath, collectionView: UICollectionView) -> CGSize {
-        CGSize(width: width,
+        CGSize(width: collectionView.bounds.width * 0.75,
                height: collectionView.bounds.height)
     }
-
+    
     func cellAt(indexPath: IndexPath,
                 collectionView: UICollectionView) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(CardCollectionViewCell.self,

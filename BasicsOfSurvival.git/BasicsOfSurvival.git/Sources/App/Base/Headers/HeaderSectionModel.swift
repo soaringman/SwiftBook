@@ -15,6 +15,8 @@ struct HeaderSectionModel {
     var titleButton: String?
     /// Изображение кнопки
     var imageButton: UIImage?
+    /// Высота заготовка
+    var heightHeader: CGFloat
     /// Действие при нажатии
     var action: ((Int) -> Void)?
 }

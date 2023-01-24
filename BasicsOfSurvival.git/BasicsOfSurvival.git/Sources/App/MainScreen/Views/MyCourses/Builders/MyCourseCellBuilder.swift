@@ -1,26 +1,24 @@
 //
-//  TVSingleCellBuilder.swift
-//  BasicsOfSurvival
+//  MyCourseCellBuilder.swift
+//  BasicsOfSurvival.git
 //
-//  Created by Владимир Рубис on 23.01.2023.
+//  Created by Владимир Рубис on 24.01.2023.
 //
 
 import UIKit
 
 /// #Строитель ячейки для размещения горизонтальной коллекции
-final class TVSingleCellBuilder {
-    /// Одна ячейка
-    private let count = 1
+final class MyCourseCellBuilder {
     /// Высота ячейки
     private let height: CGFloat
     /// Конфигураторы секций коллекции внутри ячейки
-    private let models: [CardViewModel]
+    private let models: [MyCourseViewModel]
     
-    private weak var delegate: CellSelectable?
+    private weak var delegate: MainScreenPresentation?
 
     init(height: CGFloat,
-         models: [CardViewModel],
-         delegate: CellSelectable?) {
+         models: [MyCourseViewModel],
+         delegate: MainScreenPresentation?) {
         self.height = height
         self.models = models
         self.delegate = delegate
@@ -28,21 +26,21 @@ final class TVSingleCellBuilder {
 }
 
 // MARK: - CVItemBuilderProtocol
-extension TVSingleCellBuilder: TVCellBuilderProtocol {
+extension MyCourseCellBuilder: TVCellBuilderProtocol {
     func register(tableView: UITableView) {
-        tableView.register(TVSingleCell.self)
+        tableView.register(MyCourseCell.self)
     }
     
     func cellHeight() -> CGFloat { height }
     
-    func cellCount() -> Int { count }
+    func cellCount() -> Int { models.count }
     
     func cellAt(tableView: UITableView,
                 indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(TVSingleCell.self,
+        let cell = tableView.dequeueReusableCell(MyCourseCell.self,
                                                  indexPath: indexPath)
-        cell.delegate = delegate
-        cell.configure(with: models)
+//        cell.delegate = delegate
+//        cell.configure(with: models)
         return cell
     }
 }

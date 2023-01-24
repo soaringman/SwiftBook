@@ -17,7 +17,7 @@
 		7D8F093A297FC299007226D1 /* UITableView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0911297FC298007226D1 /* UITableView + Extension.swift */; };
 		7D8F093B297FC299007226D1 /* TVBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0914297FC298007226D1 /* TVBaseCell.swift */; };
 		7D8F093C297FC299007226D1 /* TVSectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0916297FC298007226D1 /* TVSectionBuilder.swift */; };
-		7D8F093D297FC299007226D1 /* CVCardAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0918297FC298007226D1 /* CVCardAdapter.swift */; };
+		7D8F093D297FC299007226D1 /* CVAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0918297FC298007226D1 /* CVAdapter.swift */; };
 		7D8F093E297FC299007226D1 /* TVAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0919297FC298007226D1 /* TVAdapter.swift */; };
 		7D8F093F297FC299007226D1 /* TVSectionHeaderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F091B297FC298007226D1 /* TVSectionHeaderBuilder.swift */; };
 		7D8F0940297FC299007226D1 /* HeaderSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F091C297FC298007226D1 /* HeaderSectionModel.swift */; };
@@ -27,11 +27,10 @@
 		7D8F0944297FC299007226D1 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0922297FC298007226D1 /* Fonts.swift */; };
 		7D8F0945297FC299007226D1 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0925297FC298007226D1 /* CardViewModel.swift */; };
 		7D8F0946297FC299007226D1 /* CardSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0926297FC298007226D1 /* CardSectionViewModel.swift */; };
-		7D8F0947297FC299007226D1 /* CardSectionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0928297FC298007226D1 /* CardSectionConfigurator.swift */; };
 		7D8F0948297FC299007226D1 /* TVSingleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F092B297FC299007226D1 /* TVSingleCell.swift */; };
 		7D8F0949297FC299007226D1 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F092E297FC299007226D1 /* CardCollectionViewCell.swift */; };
 		7D8F094A297FC299007226D1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0930297FC299007226D1 /* CardView.swift */; };
-		7D8F094B297FC299007226D1 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0931297FC299007226D1 /* ProgressView.swift */; };
+		7D8F094B297FC299007226D1 /* RingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0931297FC299007226D1 /* RingProgressView.swift */; };
 		7D8F094C297FC299007226D1 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0932297FC299007226D1 /* PaddingLabel.swift */; };
 		7D8F094D297FC299007226D1 /* CardItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0934297FC299007226D1 /* CardItemBuilder.swift */; };
 		7D8F094E297FC299007226D1 /* TVSingleCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0936297FC299007226D1 /* TVSingleCellBuilder.swift */; };
@@ -43,6 +42,13 @@
 		7D8F0963297FD45C007226D1 /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0962297FD45C007226D1 /* MainScreenAssembly.swift */; };
 		7D8F0965297FD472007226D1 /* Assemblying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0964297FD472007226D1 /* Assemblying.swift */; };
 		7D8F0968297FD53A007226D1 /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0967297FD53A007226D1 /* MainScreenRouter.swift */; };
+		7D8F096E29800D02007226D1 /* MyCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F096D29800D02007226D1 /* MyCourseViewModel.swift */; };
+		7D8F09712980118F007226D1 /* SectionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F09702980118F007226D1 /* SectionConfigurator.swift */; };
+		7D8F09752980122D007226D1 /* MyCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F09742980122D007226D1 /* MyCourseView.swift */; };
+		7D8F097729801260007226D1 /* MyCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F097629801260007226D1 /* MyCourseCell.swift */; };
+		7D8F097929801282007226D1 /* MyCourseCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F097829801282007226D1 /* MyCourseCellBuilder.swift */; };
+		7D8F097B2980161F007226D1 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F097A2980161F007226D1 /* AppConstants.swift */; };
+		7D8F0980298063E3007226D1 /* TVSingleCellSectionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F097F298063E3007226D1 /* TVSingleCellSectionConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +83,7 @@
 		7D8F0911297FC298007226D1 /* UITableView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView + Extension.swift"; sourceTree = "<group>"; };
 		7D8F0914297FC298007226D1 /* TVBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVBaseCell.swift; sourceTree = "<group>"; };
 		7D8F0916297FC298007226D1 /* TVSectionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVSectionBuilder.swift; sourceTree = "<group>"; };
-		7D8F0918297FC298007226D1 /* CVCardAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCardAdapter.swift; sourceTree = "<group>"; };
+		7D8F0918297FC298007226D1 /* CVAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVAdapter.swift; sourceTree = "<group>"; };
 		7D8F0919297FC298007226D1 /* TVAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVAdapter.swift; sourceTree = "<group>"; };
 		7D8F091B297FC298007226D1 /* TVSectionHeaderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVSectionHeaderBuilder.swift; sourceTree = "<group>"; };
 		7D8F091C297FC298007226D1 /* HeaderSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSectionModel.swift; sourceTree = "<group>"; };
@@ -87,11 +93,10 @@
 		7D8F0922297FC298007226D1 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		7D8F0925297FC298007226D1 /* CardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		7D8F0926297FC298007226D1 /* CardSectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSectionViewModel.swift; sourceTree = "<group>"; };
-		7D8F0928297FC298007226D1 /* CardSectionConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSectionConfigurator.swift; sourceTree = "<group>"; };
 		7D8F092B297FC299007226D1 /* TVSingleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVSingleCell.swift; sourceTree = "<group>"; };
 		7D8F092E297FC299007226D1 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		7D8F0930297FC299007226D1 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		7D8F0931297FC299007226D1 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		7D8F0931297FC299007226D1 /* RingProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingProgressView.swift; sourceTree = "<group>"; };
 		7D8F0932297FC299007226D1 /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		7D8F0934297FC299007226D1 /* CardItemBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardItemBuilder.swift; sourceTree = "<group>"; };
 		7D8F0936297FC299007226D1 /* TVSingleCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVSingleCellBuilder.swift; sourceTree = "<group>"; };
@@ -103,6 +108,13 @@
 		7D8F0962297FD45C007226D1 /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
 		7D8F0964297FD472007226D1 /* Assemblying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assemblying.swift; sourceTree = "<group>"; };
 		7D8F0967297FD53A007226D1 /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
+		7D8F096D29800D02007226D1 /* MyCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseViewModel.swift; sourceTree = "<group>"; };
+		7D8F09702980118F007226D1 /* SectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionConfigurator.swift; sourceTree = "<group>"; };
+		7D8F09742980122D007226D1 /* MyCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseView.swift; sourceTree = "<group>"; };
+		7D8F097629801260007226D1 /* MyCourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseCell.swift; sourceTree = "<group>"; };
+		7D8F097829801282007226D1 /* MyCourseCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseCellBuilder.swift; sourceTree = "<group>"; };
+		7D8F097A2980161F007226D1 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		7D8F097F298063E3007226D1 /* TVSingleCellSectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVSingleCellSectionConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +200,7 @@
 		7D8F0912297FC298007226D1 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				7D8F096F29801176007226D1 /* SectionConfigurator */,
 				7D8F0913297FC298007226D1 /* Cells */,
 				7D8F0915297FC298007226D1 /* Builders */,
 				7D8F0917297FC298007226D1 /* Adapters */,
@@ -200,6 +213,7 @@
 		7D8F0913297FC298007226D1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				7D8F0929297FC299007226D1 /* TVSingleCell */,
 				7D8F0914297FC298007226D1 /* TVBaseCell.swift */,
 			);
 			path = Cells;
@@ -216,7 +230,7 @@
 		7D8F0917297FC298007226D1 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
-				7D8F0918297FC298007226D1 /* CVCardAdapter.swift */,
+				7D8F0918297FC298007226D1 /* CVAdapter.swift */,
 				7D8F0919297FC298007226D1 /* TVAdapter.swift */,
 			);
 			path = Adapters;
@@ -225,9 +239,9 @@
 		7D8F091A297FC298007226D1 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				7D8F091D297FC298007226D1 /* TVSectionHeaderWithButton.swift */,
 				7D8F091B297FC298007226D1 /* TVSectionHeaderBuilder.swift */,
 				7D8F091C297FC298007226D1 /* HeaderSectionModel.swift */,
-				7D8F091D297FC298007226D1 /* TVSectionHeaderWithButton.swift */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -247,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				7D8F0922297FC298007226D1 /* Fonts.swift */,
+				7D8F097A2980161F007226D1 /* AppConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -268,6 +283,7 @@
 			children = (
 				7D8F0925297FC298007226D1 /* CardViewModel.swift */,
 				7D8F0926297FC298007226D1 /* CardSectionViewModel.swift */,
+				7D8F096D29800D02007226D1 /* MyCourseViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -275,8 +291,7 @@
 		7D8F0927297FC298007226D1 /* CardSection */ = {
 			isa = PBXGroup;
 			children = (
-				7D8F0928297FC298007226D1 /* CardSectionConfigurator.swift */,
-				7D8F0929297FC299007226D1 /* TVSingleCell */,
+				7D8F092C297FC299007226D1 /* CollectionView */,
 			);
 			path = CardSection;
 			sourceTree = "<group>";
@@ -284,6 +299,7 @@
 		7D8F0929297FC299007226D1 /* TVSingleCell */ = {
 			isa = PBXGroup;
 			children = (
+				7D8F097F298063E3007226D1 /* TVSingleCellSectionConfigurator.swift */,
 				7D8F092A297FC299007226D1 /* Cells */,
 				7D8F0935297FC299007226D1 /* Builders */,
 			);
@@ -294,7 +310,6 @@
 			isa = PBXGroup;
 			children = (
 				7D8F092B297FC299007226D1 /* TVSingleCell.swift */,
-				7D8F092C297FC299007226D1 /* CollectionView */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -321,7 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				7D8F0930297FC299007226D1 /* CardView.swift */,
-				7D8F0931297FC299007226D1 /* ProgressView.swift */,
+				7D8F0931297FC299007226D1 /* RingProgressView.swift */,
 				7D8F0932297FC299007226D1 /* PaddingLabel.swift */,
 			);
 			path = CardView;
@@ -387,6 +402,7 @@
 				7D8F0955297FC34D007226D1 /* Controller */,
 				7D8F0937297FC299007226D1 /* Factory */,
 				7D8F0927297FC298007226D1 /* CardSection */,
+				7D8F096A29800BA3007226D1 /* MyCourses */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -430,6 +446,48 @@
 				7D8F0962297FD45C007226D1 /* MainScreenAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		7D8F096A29800BA3007226D1 /* MyCourses */ = {
+			isa = PBXGroup;
+			children = (
+				7D8F0972298011C7007226D1 /* Cells */,
+				7D8F0973298011CD007226D1 /* Builders */,
+			);
+			path = MyCourses;
+			sourceTree = "<group>";
+		};
+		7D8F096F29801176007226D1 /* SectionConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+				7D8F09702980118F007226D1 /* SectionConfigurator.swift */,
+			);
+			path = SectionConfigurator;
+			sourceTree = "<group>";
+		};
+		7D8F0972298011C7007226D1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7D8F097629801260007226D1 /* MyCourseCell.swift */,
+				7D8F097C29803509007226D1 /* MyCourseView */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7D8F0973298011CD007226D1 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				7D8F097829801282007226D1 /* MyCourseCellBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		7D8F097C29803509007226D1 /* MyCourseView */ = {
+			isa = PBXGroup;
+			children = (
+				7D8F09742980122D007226D1 /* MyCourseView.swift */,
+			);
+			path = MyCourseView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -566,10 +624,13 @@
 				7D8F093B297FC299007226D1 /* TVBaseCell.swift in Sources */,
 				7D8F0944297FC299007226D1 /* Fonts.swift in Sources */,
 				7D8F0941297FC299007226D1 /* TVSectionHeaderWithButton.swift in Sources */,
+				7D8F09712980118F007226D1 /* SectionConfigurator.swift in Sources */,
 				7D8F0945297FC299007226D1 /* CardViewModel.swift in Sources */,
-				7D8F093D297FC299007226D1 /* CVCardAdapter.swift in Sources */,
+				7D8F09752980122D007226D1 /* MyCourseView.swift in Sources */,
+				7D8F097929801282007226D1 /* MyCourseCellBuilder.swift in Sources */,
+				7D8F093D297FC299007226D1 /* CVAdapter.swift in Sources */,
 				7D8F0963297FD45C007226D1 /* MainScreenAssembly.swift in Sources */,
-				7D8F0947297FC299007226D1 /* CardSectionConfigurator.swift in Sources */,
+				7D8F096E29800D02007226D1 /* MyCourseViewModel.swift in Sources */,
 				7D8F094A297FC299007226D1 /* CardView.swift in Sources */,
 				7D8F095C297FC39E007226D1 /* MainScreenPresenter.swift in Sources */,
 				7D8F093E297FC299007226D1 /* TVAdapter.swift in Sources */,
@@ -577,6 +638,8 @@
 				7D8F0949297FC299007226D1 /* CardCollectionViewCell.swift in Sources */,
 				7D8F0943297FC299007226D1 /* TableViewSectionProtocols.swift in Sources */,
 				7D8F0946297FC299007226D1 /* CardSectionViewModel.swift in Sources */,
+				7D8F097B2980161F007226D1 /* AppConstants.swift in Sources */,
+				7D8F0980298063E3007226D1 /* TVSingleCellSectionConfigurator.swift in Sources */,
 				7D8F093F297FC299007226D1 /* TVSectionHeaderBuilder.swift in Sources */,
 				01AA8096297A78E2005D89A6 /* AppDelegate.swift in Sources */,
 				7D8F0948297FC299007226D1 /* TVSingleCell.swift in Sources */,
@@ -590,8 +653,9 @@
 				7D8F0939297FC299007226D1 /* UICollectionView + Extension.swift in Sources */,
 				7D8F093C297FC299007226D1 /* TVSectionBuilder.swift in Sources */,
 				7D8F0965297FD472007226D1 /* Assemblying.swift in Sources */,
+				7D8F097729801260007226D1 /* MyCourseCell.swift in Sources */,
 				7D8F093A297FC299007226D1 /* UITableView + Extension.swift in Sources */,
-				7D8F094B297FC299007226D1 /* ProgressView.swift in Sources */,
+				7D8F094B297FC299007226D1 /* RingProgressView.swift in Sources */,
 				7D8F095E297FC4E2007226D1 /* PresentationProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

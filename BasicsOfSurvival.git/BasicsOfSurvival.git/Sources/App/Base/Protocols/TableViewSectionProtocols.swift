@@ -14,7 +14,7 @@ protocol TVFactoryProtocol {
 }
 
 /// #Протокол конфигурации секции таблицы
-protocol TVSectionConfigurator {
+protocol TVSectionConfiguration {
     /// Конфигурирует и возвращает секцию
     func configure(for tableView: UITableView) -> TVSectionProtocol
 }
