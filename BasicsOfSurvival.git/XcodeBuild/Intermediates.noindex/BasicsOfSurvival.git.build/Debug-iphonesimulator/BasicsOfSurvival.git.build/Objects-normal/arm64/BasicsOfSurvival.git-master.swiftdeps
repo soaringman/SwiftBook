@@ -1,0 +1,11 @@
+version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)"
+options: "ce5d5a8fcffc30c96a09f703f852d4dd3311fd2fc438ce32f076ee09ad85e452"
+build_start_time: [1674199599, 692268848]
+build_end_time: [1674199601, 654703140]
+inputs:
+  ? "/Users/iosnick/Documents/Projects/SwiftBook/BasicsOfSurvival/BasicsOfSurvival/BasicsOfSurvival.git/BasicsOfSurvival.git/AppDelegate.swift"
+  : [1674199586, 749578952]
+  ? "/Users/iosnick/Documents/Projects/SwiftBook/BasicsOfSurvival/BasicsOfSurvival/BasicsOfSurvival.git/BasicsOfSurvival.git/SceneDelegate.swift"
+  : [1674199586, 750661611]
+  ? "/Users/iosnick/Documents/Projects/SwiftBook/BasicsOfSurvival/BasicsOfSurvival/BasicsOfSurvival.git/BasicsOfSurvival.git/ViewController.swift"
+  : [1674199586, 750775814]

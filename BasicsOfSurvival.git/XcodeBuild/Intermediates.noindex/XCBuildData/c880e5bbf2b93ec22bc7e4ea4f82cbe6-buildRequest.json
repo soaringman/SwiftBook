@@ -1,0 +1,64 @@
+{
+  "_buildCommand2" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "f23b5882dbbe8bbdb04255a2083794ae58366a699c3ccb84ba0d500f79cac762"
+    }
+  ],
+  "containerPath" : "/Users/iosnick/Documents/Projects/SwiftBook/BasicsOfSurvival/BasicsOfSurvival/BasicsOfSurvival.git/BasicsOfSurvival.git.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator16.1",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/iosnick/Documents/Projects/SwiftBook/BasicsOfSurvival/BasicsOfSurvival/BasicsOfSurvival.git/XcodeBuild/Intermediates.noindex",
+      "buildProductsPath" : "/Users/iosnick/Documents/Projects/SwiftBook/BasicsOfSurvival/BasicsOfSurvival/BasicsOfSurvival.git/XcodeBuild/Products",
+      "derivedDataPath" : "/Users/iosnick/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/iosnick/Library/Developer/Xcode/DerivedData/BasicsOfSurvival.git-bmrqyuzhvnentgecbqgkcbmspgwc/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/iosnick/Library/Developer/Xcode/DerivedData/BasicsOfSurvival.git-bmrqyuzhvnentgecbqgkcbmspgwc/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/iosnick/Documents/Projects/SwiftBook/BasicsOfSurvival/BasicsOfSurvival/BasicsOfSurvival.git/XcodeBuild/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPhone15,2",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "16.1",
+          "ASSETCATALOG_FILTER_FOR_THINNING_DEVICE_CONFIGURATION" : "iPhone15,2",
+          "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
+          "ENABLE_PREVIEWS" : "NO",
+          "TARGET_DEVICE_IDENTIFIER" : "D926EB0A-8DBE-4C9D-A080-90A2CCDADF68",
+          "TARGET_DEVICE_MODEL" : "iPhone15,2",
+          "TARGET_DEVICE_OS_VERSION" : "16.1",
+          "TARGET_DEVICE_PLATFORM_NAME" : "iphonesimulator"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
