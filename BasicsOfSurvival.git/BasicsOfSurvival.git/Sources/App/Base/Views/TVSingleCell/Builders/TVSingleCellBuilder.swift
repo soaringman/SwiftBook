@@ -28,11 +28,11 @@ extension TVSingleCellBuilder: TVCellBuilderProtocol {
     func register(tableView: UITableView) {
         tableView.register(TVSingleCell.self)
     }
-    
+
     func cellHeight() -> CGFloat { height }
-    
+
     func cellCount() -> Int { count }
-    
+
     func cellAt(tableView: UITableView,
                 indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(TVSingleCell.self,

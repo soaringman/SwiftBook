@@ -10,7 +10,7 @@ import UIKit
 /// #Слой навигации модуля MainScreen
 final class MainScreenRouter {
     private let navigationController: UINavigationController
-    
+
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
@@ -18,6 +18,5 @@ final class MainScreenRouter {
 
 // MARK: - MainScreenRouting
 extension MainScreenRouter: MainScreenRouting {
-    
-}
 
+}

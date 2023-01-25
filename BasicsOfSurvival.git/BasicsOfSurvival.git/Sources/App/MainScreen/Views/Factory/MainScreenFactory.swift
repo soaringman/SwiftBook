@@ -37,14 +37,14 @@ final class MainScreenFactory {
         self.sections = sections
         tvAdapter?.configure(with: createSections())
     }
-    
+
     /// Настраивает адаптер и табличное представление
     private func setupTableView() {
         tvAdapter = TVAdapter(tableView: tableView)
-        
+
         tableView.dataSource = tvAdapter
         tableView.delegate = tvAdapter
-        
+
         tvAdapter?.configure(with: createSections())
     }
 
@@ -57,7 +57,7 @@ final class MainScreenFactory {
             self?.delegate?.didTapHeaderButton(section: section)
             print("didTapHeaderButton \(section)")
         }
-        
+
         /// Конфигурируем секцию по типу
         switch type {
         case .cards(let viewModel):
@@ -66,21 +66,21 @@ final class MainScreenFactory {
                                                  titleButton: viewModel.titleHeaderButton,
                                                  heightHeader: Constants.heightHeader,
                                                  action: action)
-            
+
             let builders = [CardItemBuilder(viewModels: viewModel.viewModels,
                                             delegate: delegate)]
-            
+
             return TVSingleCellSectionConfigurator(builders: builders,
                                                    heightCell: Constants.heightCardSection,
                                                    headerModel: headerModel).configure(for: tableView)
-            
+
         case .myCourses(let viewModel):
             /// - секция курсов, которые находятся в процессе прохождения
             let headerModel = HeaderSectionModel(titleSection: viewModel.titleSection,
                                                  titleButton: viewModel.titleHeaderButton,
                                                  heightHeader: Constants.heightHeader,
                                                  action: action)
-            
+
             return MyCourseSectionConfigurator(viewModels: viewModel.viewModels,
                                                heightCell: Constants.heightMyCoursesSection,
                                                headerModel: headerModel,
@@ -100,7 +100,7 @@ extension MainScreenFactory: TVFactoryProtocol {
 private extension MainScreenFactory {
     struct Constants {
         static let heightHeader: CGFloat = 45
-        
+
         static let heightCardSection: CGFloat = 175
         static let heightMyCoursesSection: CGFloat = 163
     }

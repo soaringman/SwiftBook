@@ -23,7 +23,17 @@ extension Colors {
         case .color20: return #colorLiteral(red: 0.8549019608, green: 0.8784313725, blue: 0.831372549, alpha: 1) // #DAE0D4
         }
     }
-    
+
+    var darkGreen: UIColor {
+        switch self {
+        case .color100: return #colorLiteral(red: 0.04705882353, green: 0.05490196078, blue: 0.003921568627, alpha: 1) // #0C0E01
+        case .color80: return #colorLiteral(red: 0.2392156863, green: 0.2431372549, blue: 0.2039215686, alpha: 1) // #3D3E34
+        case .color60: return #colorLiteral(red: 0.4274509804, green: 0.431372549, blue: 0.4039215686, alpha: 1) // #6D6E67
+        case .color40: return #colorLiteral(red: 0.6196078431, green: 0.6235294118, blue: 0.6, alpha: 1) // #9E9F99
+        case .color20: return #colorLiteral(red: 0.8078431373, green: 0.8117647059, blue: 0.8, alpha: 1) // #CECFCC
+        }
+    }
+
     var silver: UIColor {
         switch self {
         case .color100: return #colorLiteral(red: 0.8274509804, green: 0.8352941176, blue: 0.8705882353, alpha: 1) // #D3D5DE
@@ -40,5 +50,3 @@ struct OtherColors {
     static let ringProgressSecondaryColor: UIColor = #colorLiteral(red: 0.2823529412, green: 0.4, blue: 0.1647058824, alpha: 0.5495854592)
     static let paddingLabelBGColor: UIColor = #colorLiteral(red: 0.1868853271, green: 0.2424373627, blue: 0.2139189541, alpha: 0.9025829082)
 }
-
-

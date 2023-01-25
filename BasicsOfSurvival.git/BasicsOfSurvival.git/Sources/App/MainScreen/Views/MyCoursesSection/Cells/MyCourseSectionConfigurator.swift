@@ -11,9 +11,9 @@ import UIKit
 final class MyCourseSectionConfigurator: SectionConfigurator {
     /// Вью модели курсов
     private let viewModels: [MyCourseViewModel]
-    
+
     private weak var delegate: StudyContinuing?
-    
+
     init(viewModels: [MyCourseViewModel],
          heightCell: CGFloat,
          headerModel: HeaderSectionModel?,
@@ -27,7 +27,7 @@ final class MyCourseSectionConfigurator: SectionConfigurator {
 
 // MARK: - TVSectionConfiguration
 extension MyCourseSectionConfigurator: TVSectionConfiguration {
-    
+
     func configure(for tableView: UITableView) -> TVSectionProtocol {
         /// Конфигурируем билдер заголовка
         var headerBuilder: TVSectionHeaderBuilder?
@@ -39,11 +39,10 @@ extension MyCourseSectionConfigurator: TVSectionConfiguration {
                                               viewModels: viewModels,
                                               delegate: delegate)
         cellBuilder.register(tableView: tableView)
-        
+
         /// Конфигурируем секцию
         let section = TVSectionBuilder(headerBuilder: headerBuilder,
                                        cellBuilder: cellBuilder)
         return section
     }
 }
-

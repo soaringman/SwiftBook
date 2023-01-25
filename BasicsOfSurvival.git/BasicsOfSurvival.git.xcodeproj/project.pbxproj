@@ -54,6 +54,7 @@
 		7D8F098829807D63007226D1 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F098729807D63007226D1 /* BaseView.swift */; };
 		7D8F098A2981065F007226D1 /* CALayer + Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F09892981065F007226D1 /* CALayer + Shadow.swift */; };
 		7D8F098C29810CD7007226D1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F098B29810CD7007226D1 /* Colors.swift */; };
+		7D8F098E29816CFA007226D1 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F098D29816CFA007226D1 /* Icons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		7D8F098729807D63007226D1 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		7D8F09892981065F007226D1 /* CALayer + Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Shadow.swift"; sourceTree = "<group>"; };
 		7D8F098B29810CD7007226D1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7D8F098D29816CFA007226D1 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 			children = (
 				7D8F0922297FC298007226D1 /* Fonts.swift */,
 				7D8F098B29810CD7007226D1 /* Colors.swift */,
+				7D8F098D29816CFA007226D1 /* Icons.swift */,
 				7D8F097A2980161F007226D1 /* AppConstants.swift */,
 			);
 			path = Constants;
@@ -523,6 +526,7 @@
 				01AA808E297A78E2005D89A6 /* Sources */,
 				01AA808F297A78E2005D89A6 /* Frameworks */,
 				01AA8090297A78E2005D89A6 /* Resources */,
+				7D8F098F298179AD007226D1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -638,6 +642,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7D8F098F298179AD007226D1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		01AA808E297A78E2005D89A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -685,6 +709,7 @@
 				7D8F093A297FC299007226D1 /* UITableView + Extension.swift in Sources */,
 				7D8F094B297FC299007226D1 /* RingProgressView.swift in Sources */,
 				7D8F095E297FC4E2007226D1 /* PresentationProtocols.swift in Sources */,
+				7D8F098E29816CFA007226D1 /* Icons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

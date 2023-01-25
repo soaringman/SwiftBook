@@ -24,8 +24,3 @@ struct CardViewModel {
     /// Название изображения
     var imageName: String?
 }
-
-
-
-
-

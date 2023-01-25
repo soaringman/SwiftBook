@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class BasicsOfSurvival_gitUITestsLaunchTests: XCTestCase {
+final class BasicsOfSurvivalUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

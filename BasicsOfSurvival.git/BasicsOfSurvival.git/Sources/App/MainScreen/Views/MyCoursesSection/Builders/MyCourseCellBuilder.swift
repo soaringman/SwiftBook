@@ -13,7 +13,7 @@ final class MyCourseCellBuilder {
     private let height: CGFloat
     /// Конфигураторы секций коллекции внутри ячейки
     private let viewModels: [MyCourseViewModel]
-    
+
     private weak var delegate: StudyContinuing?
 
     init(height: CGFloat,
@@ -30,11 +30,11 @@ extension MyCourseCellBuilder: TVCellBuilderProtocol {
     func register(tableView: UITableView) {
         tableView.register(MyCourseCell.self)
     }
-    
+
     func cellHeight() -> CGFloat { height }
-    
+
     func cellCount() -> Int { viewModels.count }
-    
+
     func cellAt(tableView: UITableView,
                 indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(MyCourseCell.self,

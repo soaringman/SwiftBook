@@ -10,7 +10,7 @@ import UIKit
 /// #Компановщик модуля MainScreen
 final class MainScreenAssembly {
     private let navigationController: UINavigationController
-    
+
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
@@ -23,9 +23,7 @@ extension MainScreenAssembly: Assemblying {
         let presenter = MainScreenPresenter(router: router)
         let viewController = MainScreenViewController(presenter: presenter)
         presenter.view = viewController
-        
+
         return viewController
     }
 }
-
-

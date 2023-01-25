@@ -29,14 +29,14 @@ final class TVSingleCell: TVBaseCell {
     /// Настройка ячейки
     override func setupCell() {
         backgroundColor = .clear
-        
+
         adapter = CVAdapter()
         collectionView.dataSource = adapter
         collectionView.delegate = adapter
-        
+
         setupConstraints()
     }
-    
+
     /// Конфигурирует внутреннюю коллекцию по переданному массиву моделей
     func configure(with builders: [CVItemBuilderProtocol]) {
         builders.forEach { $0.register(collectionView: collectionView) }

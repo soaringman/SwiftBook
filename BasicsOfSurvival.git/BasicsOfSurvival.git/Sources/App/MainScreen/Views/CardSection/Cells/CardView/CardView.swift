@@ -19,7 +19,7 @@ final class CardView: BaseView {
         imageView.layer.cornerRadius = 10
         return imageView
     }()
-    
+
     /// Лейбл названием курса
     private lazy var courseNameLabel: UILabel = {
         let label = UILabel()
@@ -29,7 +29,7 @@ final class CardView: BaseView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     /// Прогресс вью
     private lazy var progressView: RingProgressView = {
         let view = RingProgressView()
@@ -40,7 +40,7 @@ final class CardView: BaseView {
     private lazy var numberOfTopicsLabel = PaddingLabel()
     private lazy var numberOfTestsLabel = PaddingLabel()
     private lazy var totalTimeLabel = PaddingLabel()
-    
+
     /// Контейнер под лейблы
     private lazy var container: UIStackView = {
         let stack = UIStackView()
@@ -48,21 +48,21 @@ final class CardView: BaseView {
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
-    
+
     // MARK: - Functions
     func configure(with model: CardViewModel) {
         progressView.configure(with: model.percentageProgress)
         courseNameLabel.text = model.courseName
-        
+
         numberOfTopicsLabel.text = model.numberOfTopics
         numberOfTestsLabel.text = model.numberOfTests
         totalTimeLabel.text = model.totalTime
-        
+
         if let imageName = model.imageName {
             cardImageView.image = UIImage(named: imageName)
         }
     }
-    
+
     override func setupView() {
         [numberOfTopicsLabel, numberOfTestsLabel, totalTimeLabel].forEach {
             $0.textAlignment = .center
@@ -75,33 +75,33 @@ final class CardView: BaseView {
         }
         setupConstraints()
     }
-    
+
     /// Настройка констрейнтов
     private func setupConstraints() {
         cardImageView.addSubview(courseNameLabel)
         cardImageView.addSubview(progressView)
         cardImageView.addSubview(container)
-        
+
         addSubview(cardImageView)
-        
+
         NSLayoutConstraint.activate([
             cardImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             cardImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             cardImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             cardImageView.topAnchor.constraint(equalTo: topAnchor),
-            
+
             courseNameLabel.topAnchor.constraint(equalTo: cardImageView.topAnchor, constant: 18),
             courseNameLabel.leadingAnchor.constraint(equalTo: cardImageView.leadingAnchor, constant: 24),
             courseNameLabel.trailingAnchor.constraint(equalTo: progressView.leadingAnchor, constant: -14),
-            
+
             progressView.topAnchor.constraint(equalTo: cardImageView.topAnchor, constant: 14),
             progressView.trailingAnchor.constraint(equalTo: cardImageView.trailingAnchor, constant: -14),
             progressView.heightAnchor.constraint(equalToConstant: 54),
             progressView.widthAnchor.constraint(equalTo: progressView.heightAnchor),
-            
+
             container.bottomAnchor.constraint(equalTo: cardImageView.bottomAnchor, constant: -18),
             container.leadingAnchor.constraint(equalTo: cardImageView.leadingAnchor, constant: 24)
         ])
     }
-    
+
 }

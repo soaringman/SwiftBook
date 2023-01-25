@@ -13,7 +13,7 @@ class SectionConfigurator {
     let heightCell: CGFloat
     /// Модель заголовка
     let headerModel: HeaderSectionModel?
-    
+
     init(heightCell: CGFloat,
          headerModel: HeaderSectionModel?) {
         self.heightCell = heightCell

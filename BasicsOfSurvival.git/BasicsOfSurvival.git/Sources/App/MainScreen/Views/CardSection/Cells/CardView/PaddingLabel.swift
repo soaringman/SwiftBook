@@ -14,7 +14,7 @@ final class PaddingLabel: UILabel {
     private var bottomInset: CGFloat = 6.0
     private var leftInset: CGFloat = 12.0
     private var rightInset: CGFloat = 12.0
-    
+
     /// Дополнительный инициализатор для определения отступов
     convenience init(topInset: CGFloat,
                      bottomInset: CGFloat,
@@ -26,7 +26,7 @@ final class PaddingLabel: UILabel {
         self.leftInset = leftInset
         self.rightInset = rightInset
     }
-    
+
     override func drawText(in rect: CGRect) {
         let insets = UIEdgeInsets(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
         super.drawText(in: rect.inset(by: insets))
@@ -44,5 +44,3 @@ final class PaddingLabel: UILabel {
         }
     }
 }
-
-

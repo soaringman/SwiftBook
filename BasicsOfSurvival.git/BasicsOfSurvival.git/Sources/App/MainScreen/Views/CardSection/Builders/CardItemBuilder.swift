@@ -13,7 +13,7 @@ final class CardItemBuilder {
     private let viewModels: [CardViewModel]
 
     weak var delegate: CellSelectable?
-    
+
     init(viewModels: [CardViewModel],
          delegate: CellSelectable?) {
         self.viewModels = viewModels
@@ -34,14 +34,14 @@ extension CardItemBuilder: CVSelectableItemBuilderProtocol {
         CGSize(width: collectionView.bounds.width * 0.75,
                height: collectionView.bounds.height)
     }
-    
+
     func cellAt(indexPath: IndexPath,
                 collectionView: UICollectionView) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(CardCell.self,
                                                       indexPath: indexPath)
         let viewModel = viewModels[indexPath.item]
         cell.configure(with: viewModel)
-        
+
         return cell
     }
 

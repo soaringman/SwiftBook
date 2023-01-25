@@ -16,4 +16,3 @@ struct CardSectionViewModel {
     /// Вью модели карточек
     var viewModels: [CardViewModel]
 }
-

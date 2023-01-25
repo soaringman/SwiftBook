@@ -23,16 +23,16 @@ protocol MainScreenViewable: AnyObject {
 
 /// #Протокол управления слоем навигации модуля MainScreen
 protocol MainScreenRouting {
-    
+
 }
 
 // MARK: - Presenter
 /// #Слой презентации модуля MainScreen
 final class MainScreenPresenter {
-    
+
     private let router: MainScreenRouting
     weak var view: MainScreenViewable?
-    
+
     init(router: MainScreenRouting) {
         self.router = router
     }
@@ -43,11 +43,11 @@ extension MainScreenPresenter: MainScreenPresentation {
     func didTapContinueStudyButton(id: Int) {
         /// Обработка
     }
-    
+
     func didTapHeaderButton(section: Int) {
         /// Обработка
     }
-    
+
     func didSelectItem(id: Int) {
         /// Обработка
     }

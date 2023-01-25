@@ -14,7 +14,7 @@ extension UICollectionView {
         register(classType,
                  forCellWithReuseIdentifier: string)
     }
-    
+
     /// Переиспользование ячейки коллекции
     func dequeueReusableCell<T: UICollectionViewCell>(_ classType: T.Type,
                                                       indexPath: IndexPath) -> T {

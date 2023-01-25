@@ -18,17 +18,19 @@ final class RingProgressView: BaseView {
     private var primaryColor: UIColor = OtherColors.ringProgressPrimaryColor
     /// Вспомогательный цвет
     private var secondaryColor: UIColor = OtherColors.ringProgressSecondaryColor
-    
+    /// Наличие блюр-эффекта
+    private var isBlurEffect: Bool = true
+
     /// Лейбл с процентами успеваемости
     private lazy var persantageLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.textColor = .white
+        label.textColor = isBlurEffect ? .white : Colors.color80.darkGreen
         label.font = Fonts.selected
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     /// Блюр-вью
     private lazy var blurView: UIVisualEffectView = {
         let effect = UIBlurEffect(style: UIBlurEffect.Style.dark)
@@ -38,47 +40,55 @@ final class RingProgressView: BaseView {
         blur.translatesAutoresizingMaskIntoConstraints = false
         return blur
     }()
-    
+
     // MARK: - Init & Override
-    /// Дополнительный инициализатор для настройки прогресс-линии
+    /// Дополнительные инициализаторы
+    convenience init(isBlurEffect: Bool) {
+        self.init()
+        self.isBlurEffect = isBlurEffect
+        setupView()
+    }
+
     convenience init(borderWidth: CGFloat,
                      primaryColor: UIColor,
-                     secondaryWidth: UIColor) {
+                     secondaryWidth: UIColor,
+                     isBlurEffect: Bool) {
         self.init()
         self.borderWidth = borderWidth
         self.primaryColor = primaryColor
         self.secondaryColor = secondaryWidth
-        
+        self.isBlurEffect = isBlurEffect
+
         setupView()
     }
-    
+
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         drawRing()
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         blurView.layer.cornerRadius = frame.height / 2 - borderWidth
     }
-    
+
     // MARK: - Functions
     func configure(with percent: Int) {
         persantageLabel.text = "\(percent)%"
         self.percent = percent
     }
-    
+
     override func setupView() {
         backgroundColor = .clear
+        blurView.isHidden = !isBlurEffect
         setupConstraints()
     }
-    
+
     /// Рисует изображение в виде кольца для view
     private func drawRing() {
         let startAngle = CGFloat(3 * Double.pi / 2)
         let middleAngle = startAngle - CGFloat(2 * Double.pi) * CGFloat(percent) / 100
-        
+
         partRing(startAngle: startAngle,
                    endAngle: middleAngle,
                    strokeColor: primaryColor,
@@ -88,7 +98,7 @@ final class RingProgressView: BaseView {
                    strokeColor: secondaryColor,
                    borderWidth: borderWidth)
     }
-    
+
     /// Рисует часть кольца
     /// - Parameters:
     ///  - startAngle: начальный угол
@@ -101,7 +111,7 @@ final class RingProgressView: BaseView {
                           borderWidth: CGFloat) {
         let center = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
         let radius = CGFloat(self.frame.width - borderWidth) / 2
-        
+
         let path = UIBezierPath(arcCenter: center,
                                 radius: radius,
                                 startAngle: startAngle,
@@ -111,18 +121,18 @@ final class RingProgressView: BaseView {
         strokeColor.setStroke()
         path.stroke()
     }
-    
+
     /// Настройка констрейнтов
     private func setupConstraints() {
         addSubview(blurView)
         addSubview(persantageLabel)
-        
+
         NSLayoutConstraint.activate([
             persantageLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             persantageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -18),
             persantageLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             persantageLabel.topAnchor.constraint(equalTo: topAnchor, constant: 19),
-            
+
             blurView.centerXAnchor.constraint(equalTo: centerXAnchor),
             blurView.centerYAnchor.constraint(equalTo: centerYAnchor),
             blurView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: borderWidth),

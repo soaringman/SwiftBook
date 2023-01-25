@@ -10,7 +10,7 @@ import UIKit
 /// #Конфигуратор секции единичной ячейки с коллекцией
 final class TVSingleCellSectionConfigurator: SectionConfigurator {
     private let builders: [CVItemBuilderProtocol]
-    
+
     init(builders: [CVItemBuilderProtocol],
          heightCell: CGFloat,
          headerModel: HeaderSectionModel?) {
@@ -22,7 +22,7 @@ final class TVSingleCellSectionConfigurator: SectionConfigurator {
 
 // MARK: - CVSectionConfiguration
 extension TVSingleCellSectionConfigurator: TVSectionConfiguration {
-    
+
     func configure(for tableView: UITableView) -> TVSectionProtocol {
         /// Конфигурируем билдер заголовка
         var headerBuilder: TVSectionHeaderBuilder?
@@ -33,7 +33,7 @@ extension TVSingleCellSectionConfigurator: TVSectionConfiguration {
         let cellBuilder = TVSingleCellBuilder(height: heightCell,
                                               builders: builders)
         cellBuilder.register(tableView: tableView)
-        
+
         /// Конфигурируем секцию
         let section = TVSectionBuilder(headerBuilder: headerBuilder,
                                        cellBuilder: cellBuilder)

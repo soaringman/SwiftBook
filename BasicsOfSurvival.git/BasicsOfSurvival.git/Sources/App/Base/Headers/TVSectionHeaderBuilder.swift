@@ -18,9 +18,9 @@ final class TVSectionHeaderBuilder {
 
 // MARK: - CVHeaderBuilderProtocol
 extension TVSectionHeaderBuilder: TVHeaderBuilderProtocol {
-    
+
     func headerHeight() -> CGFloat { model.heightHeader }
-    
+
     func viewForHeaderInSection(tableView: UITableView,
                                 section: Int) -> UIView? {
         let headerView = TVSectionHeaderWithButton.init(frame: CGRect.init(x: 0,
