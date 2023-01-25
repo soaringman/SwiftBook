@@ -56,7 +56,7 @@ final class MyCourseCell: TVBaseCell {
         view.layer.cornerRadius = 10
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.addShadow(color: UIColor(red: 0, green: 0, blue: 0, alpha: 0.07),
-                              radius: 5,
+                              radius: 10,
                               opacity: 1,
                               offset: .zero)
         return view
@@ -85,7 +85,6 @@ final class MyCourseCell: TVBaseCell {
         contentView.addSubview(container)
         
         let padding: CGFloat = 16
-        let top: CGFloat = 12
         
         let heightButton: CGFloat = 45
         let heightButtonAnchor = continueStudyButton.heightAnchor.constraint(equalToConstant: heightButton)
@@ -109,12 +108,12 @@ final class MyCourseCell: TVBaseCell {
             separateView.bottomAnchor.constraint(equalTo: continueStudyButton.topAnchor),
             separateView.leadingAnchor.constraint(equalTo: container.leadingAnchor),
             separateView.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            separateView.heightAnchor.constraint(equalToConstant: 1),
+            separateView.heightAnchor.constraint(equalToConstant: heightSeparateView),
             
             continueStudyButton.bottomAnchor.constraint(equalTo: container.bottomAnchor),
             continueStudyButton.leadingAnchor.constraint(equalTo: container.leadingAnchor),
             continueStudyButton.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            continueStudyButton.heightAnchor.constraint(equalToConstant: 45)
+            continueStudyButton.heightAnchor.constraint(equalToConstant: heightButton)
         ])
     }
 }

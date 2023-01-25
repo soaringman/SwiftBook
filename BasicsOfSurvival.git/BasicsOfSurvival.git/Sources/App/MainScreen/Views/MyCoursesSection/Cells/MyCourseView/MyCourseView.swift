@@ -33,6 +33,7 @@ final class MyCourseView: BaseView {
         let label = UILabel()
         label.font = Fonts.annotation
         label.textColor = Colors.color80.green
+        label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -74,17 +75,19 @@ final class MyCourseView: BaseView {
             courseImageView.trailingAnchor.constraint(equalTo: courseLabel.leadingAnchor, constant: -12),
             courseImageView.widthAnchor.constraint(equalTo: courseImageView.heightAnchor),
             
-            courseLabel.topAnchor.constraint(equalTo: topAnchor, constant: 17),
+            courseLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             courseLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -18),
             courseLabel.bottomAnchor.constraint(equalTo: progressView.topAnchor, constant: -8),
             
             progressView.leadingAnchor.constraint(equalTo: courseLabel.leadingAnchor),
             progressView.trailingAnchor.constraint(equalTo: courseLabel.trailingAnchor),
             progressView.bottomAnchor.constraint(equalTo: ratioCoursesLabel.topAnchor, constant: -4),
+            progressView.heightAnchor.constraint(equalToConstant: 7),
             
             ratioCoursesLabel.leadingAnchor.constraint(equalTo: courseLabel.leadingAnchor),
             ratioCoursesLabel.trailingAnchor.constraint(equalTo: courseLabel.trailingAnchor),
-            ratioCoursesLabel.bottomAnchor.constraint(equalTo: courseImageView.bottomAnchor, constant: -3)
+            ratioCoursesLabel.bottomAnchor.constraint(equalTo: courseImageView.bottomAnchor, constant: -2),
+            ratioCoursesLabel.heightAnchor.constraint(equalToConstant: 17)
         ])
     }
 }

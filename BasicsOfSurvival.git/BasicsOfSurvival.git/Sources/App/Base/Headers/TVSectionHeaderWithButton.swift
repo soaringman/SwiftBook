@@ -20,7 +20,10 @@ final class TVSectionHeaderWithButton: UIView {
         let label = UILabel()
         label.font = Fonts.subtitle
         label.textColor = .black
-        label.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        label.setContentHuggingPriority(.defaultLow,
+                                        for: .horizontal)
+        label.setContentCompressionResistancePriority(.defaultLow,
+                                                      for: .horizontal)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -29,12 +32,12 @@ final class TVSectionHeaderWithButton: UIView {
     private lazy var headerButton: UIButton = {
         let button = UIButton()
         button.tintColor = .black
-        
         button.setTitleColor(Colors.color100.green, for: .normal)
         button.addTarget(self,
                          action: #selector(changeLayoutButtonTapped),
                          for: .touchUpInside)
-        button.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        button.setContentHuggingPriority(.defaultHigh,
+                                        for: .horizontal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -76,12 +79,13 @@ final class TVSectionHeaderWithButton: UIView {
         addSubview(headerButton)
 
         let padding: CGFloat = 16
+        let bottom: CGFloat = 18
 
         NSLayoutConstraint.activate([
             titleSectionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             titleSectionLabel.trailingAnchor.constraint(equalTo: headerButton.leadingAnchor, constant: -padding / 2),
             titleSectionLabel.topAnchor.constraint(equalTo: topAnchor),
-            titleSectionLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
+            titleSectionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -bottom),
             
             headerButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
             headerButton.topAnchor.constraint(equalTo: titleSectionLabel.topAnchor),

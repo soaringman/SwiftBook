@@ -10,4 +10,5 @@ import Foundation
 struct AppConstants {
     
     static let padding: CGFloat = 16
+    static let bottomPaddingSectionTableView: CGFloat = 32
 }

@@ -60,7 +60,7 @@ final class MainScreenViewController: UIViewController {
         
         let array = [cardModel, cardModel, cardModel]
         let viewModels = [CardSectionViewModel(titleSection: "Местность", titleHeaderButton: "Все", viewModels: array),
-                          CardSectionViewModel(titleSection: "Экстреимальные ситуации", titleHeaderButton: "Все", viewModels: array)]
+                          CardSectionViewModel(titleSection: "Экстремальные ситуации", titleHeaderButton: "Все", viewModels: array)]
         
         var sections = viewModels.map { MainScreenSections.cards($0) }
         

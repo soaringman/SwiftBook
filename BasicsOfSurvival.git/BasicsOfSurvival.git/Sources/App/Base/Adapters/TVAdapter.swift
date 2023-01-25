@@ -48,6 +48,12 @@ extension TVAdapter: UITableViewDataSource {
         return headerBuilder.viewForHeaderInSection(tableView: tableView,
                                                                  section: section)
     }
+    
+    func tableView(_ tableView: UITableView,
+                   viewForFooterInSection section: Int) -> UIView? {
+        /// Установлен пустой Footer как отступ для секции
+        UIView()
+    }
 }
 
 // MARK: - UITableViewDelegate
@@ -62,5 +68,10 @@ extension TVAdapter: UITableViewDelegate {
         guard let headerBuilder = sections[section].headerBuilder else { return 0 }
         
         return headerBuilder.headerHeight()
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   heightForFooterInSection section: Int) -> CGFloat {
+        AppConstants.bottomPaddingSectionTableView
     }
 }
