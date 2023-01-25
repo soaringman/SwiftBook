@@ -69,8 +69,8 @@ final class CardView: BaseView {
             $0.layer.cornerRadius = 10
             $0.clipsToBounds = true
             $0.font = Fonts.annotation
-            $0.backgroundColor = #colorLiteral(red: 0.2745098039, green: 0.2978057265, blue: 0.2777234018, alpha: 0.9)
-            $0.textColor = .white
+            $0.backgroundColor = OtherColors.paddingLabelBGColor
+            $0.textColor = Colors.color100.silver
             container.addArrangedSubview($0)
         }
         setupConstraints()

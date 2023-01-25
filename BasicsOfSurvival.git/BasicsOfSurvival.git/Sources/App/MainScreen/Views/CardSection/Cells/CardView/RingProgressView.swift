@@ -15,9 +15,9 @@ final class RingProgressView: BaseView {
     /// Ширина линии
     private var borderWidth: CGFloat = 4
     /// Основной цвет
-    private var primaryColor: UIColor = #colorLiteral(red: 0.1637479961, green: 0.7240898013, blue: 0.3706274629, alpha: 1)
+    private var primaryColor: UIColor = OtherColors.ringProgressPrimaryColor
     /// Вспомогательный цвет
-    private var secondaryColor: UIColor = #colorLiteral(red: 0.1595322788, green: 0.2052637935, blue: 0.2344131768, alpha: 0.5495854592)
+    private var secondaryColor: UIColor = OtherColors.ringProgressSecondaryColor
     
     /// Лейбл с процентами успеваемости
     private lazy var persantageLabel: UILabel = {

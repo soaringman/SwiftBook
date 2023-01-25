@@ -102,6 +102,6 @@ private extension MainScreenFactory {
         static let heightHeader: CGFloat = 45
         
         static let heightCardSection: CGFloat = 175
-        static let heightMyCoursesSection: CGFloat = 150
+        static let heightMyCoursesSection: CGFloat = 163
     }
 }

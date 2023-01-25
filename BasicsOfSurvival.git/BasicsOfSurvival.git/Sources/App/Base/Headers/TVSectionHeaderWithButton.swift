@@ -30,7 +30,7 @@ final class TVSectionHeaderWithButton: UIView {
         let button = UIButton()
         button.tintColor = .black
         
-        button.setTitleColor(#colorLiteral(red: 0.2860085964, green: 0.3992180824, blue: 0.1651462018, alpha: 1), for: .normal)
+        button.setTitleColor(Colors.color100.green, for: .normal)
         button.addTarget(self,
                          action: #selector(changeLayoutButtonTapped),
                          for: .touchUpInside)

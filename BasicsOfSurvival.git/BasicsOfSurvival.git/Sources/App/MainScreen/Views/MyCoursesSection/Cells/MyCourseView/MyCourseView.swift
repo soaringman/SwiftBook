@@ -13,11 +13,6 @@ final class MyCourseView: BaseView {
     /// Действие при нажатии на кнопку
     private var action: (() -> Void)?
     
-    private lazy var separateView: UIView = {
-        let view = UIView()
-        return view
-    }()
-    
     private lazy var courseImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
@@ -37,7 +32,7 @@ final class MyCourseView: BaseView {
     private lazy var ratioCoursesLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.annotation
-        label.textColor = #colorLiteral(red: 0.4276415706, green: 0.5208479166, blue: 0.3311662376, alpha: 1)
+        label.textColor = Colors.color80.green
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -74,10 +69,10 @@ final class MyCourseView: BaseView {
         
         NSLayoutConstraint.activate([
             courseImageView.topAnchor.constraint(equalTo: topAnchor, constant: 14),
+            courseImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12),
             courseImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
             courseImageView.trailingAnchor.constraint(equalTo: courseLabel.leadingAnchor, constant: -12),
-            courseImageView.widthAnchor.constraint(equalToConstant: 80),
-            courseImageView.heightAnchor.constraint(equalTo: courseImageView.widthAnchor),
+            courseImageView.widthAnchor.constraint(equalTo: courseImageView.heightAnchor),
             
             courseLabel.topAnchor.constraint(equalTo: topAnchor, constant: 17),
             courseLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -18),
@@ -85,7 +80,7 @@ final class MyCourseView: BaseView {
             
             progressView.leadingAnchor.constraint(equalTo: courseLabel.leadingAnchor),
             progressView.trailingAnchor.constraint(equalTo: courseLabel.trailingAnchor),
-            progressView.bottomAnchor.constraint(equalTo: ratioCoursesLabel.topAnchor, constant: 4),
+            progressView.bottomAnchor.constraint(equalTo: ratioCoursesLabel.topAnchor, constant: -4),
             
             ratioCoursesLabel.leadingAnchor.constraint(equalTo: courseLabel.leadingAnchor),
             ratioCoursesLabel.trailingAnchor.constraint(equalTo: courseLabel.trailingAnchor),

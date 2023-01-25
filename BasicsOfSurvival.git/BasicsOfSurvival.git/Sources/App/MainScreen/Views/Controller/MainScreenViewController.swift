@@ -23,7 +23,8 @@ final class MainScreenViewController: UIViewController {
     private var factory: MainScreenFactory?
     
     private lazy var tableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: CGRect.zero,
+                                    style: .grouped)
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.backgroundColor = .clear
@@ -59,7 +60,6 @@ final class MainScreenViewController: UIViewController {
         
         let array = [cardModel, cardModel, cardModel]
         let viewModels = [CardSectionViewModel(titleSection: "Местность", titleHeaderButton: "Все", viewModels: array),
-                          CardSectionViewModel(titleSection: "Природные условия", titleHeaderButton: "Все", viewModels: array),
                           CardSectionViewModel(titleSection: "Экстреимальные ситуации", titleHeaderButton: "Все", viewModels: array)]
         
         var sections = viewModels.map { MainScreenSections.cards($0) }

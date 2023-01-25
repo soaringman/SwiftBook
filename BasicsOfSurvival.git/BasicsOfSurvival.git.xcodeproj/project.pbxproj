@@ -52,6 +52,8 @@
 		7D8F098229807400007226D1 /* MyCourseSectionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F098129807400007226D1 /* MyCourseSectionConfigurator.swift */; };
 		7D8F098429807618007226D1 /* MyCoursesSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F098329807618007226D1 /* MyCoursesSectionViewModel.swift */; };
 		7D8F098829807D63007226D1 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F098729807D63007226D1 /* BaseView.swift */; };
+		7D8F098A2981065F007226D1 /* CALayer + Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F09892981065F007226D1 /* CALayer + Shadow.swift */; };
+		7D8F098C29810CD7007226D1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F098B29810CD7007226D1 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		7D8F098129807400007226D1 /* MyCourseSectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseSectionConfigurator.swift; sourceTree = "<group>"; };
 		7D8F098329807618007226D1 /* MyCoursesSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesSectionViewModel.swift; sourceTree = "<group>"; };
 		7D8F098729807D63007226D1 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		7D8F09892981065F007226D1 /* CALayer + Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Shadow.swift"; sourceTree = "<group>"; };
+		7D8F098B29810CD7007226D1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 		7D8F090F297FC298007226D1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7D8F09892981065F007226D1 /* CALayer + Shadow.swift */,
 				7D8F0910297FC298007226D1 /* UICollectionView + Extension.swift */,
 				7D8F0911297FC298007226D1 /* UITableView + Extension.swift */,
 			);
@@ -268,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				7D8F0922297FC298007226D1 /* Fonts.swift */,
+				7D8F098B29810CD7007226D1 /* Colors.swift */,
 				7D8F097A2980161F007226D1 /* AppConstants.swift */,
 			);
 			path = Constants;
@@ -668,10 +674,12 @@
 				7D8F0961297FD426007226D1 /* AppCoordinator.swift in Sources */,
 				7D8F094F297FC299007226D1 /* MainScreenFactory.swift in Sources */,
 				7D8F0942297FC299007226D1 /* CVItemBuilderProtocol.swift in Sources */,
+				7D8F098C29810CD7007226D1 /* Colors.swift in Sources */,
 				7D8F0939297FC299007226D1 /* UICollectionView + Extension.swift in Sources */,
 				7D8F093C297FC299007226D1 /* TVSectionBuilder.swift in Sources */,
 				7D8F0965297FD472007226D1 /* Assemblying.swift in Sources */,
 				7D8F098229807400007226D1 /* MyCourseSectionConfigurator.swift in Sources */,
+				7D8F098A2981065F007226D1 /* CALayer + Shadow.swift in Sources */,
 				7D8F097729801260007226D1 /* MyCourseCell.swift in Sources */,
 				7D8F098429807618007226D1 /* MyCoursesSectionViewModel.swift in Sources */,
 				7D8F093A297FC299007226D1 /* UITableView + Extension.swift in Sources */,
