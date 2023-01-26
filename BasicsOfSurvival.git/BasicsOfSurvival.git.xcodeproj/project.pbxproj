@@ -99,7 +99,6 @@
 		01AA8094297A78E2005D89A6 /* BasicsOfSurvival.git */ = {
 			isa = PBXGroup;
 			children = (
-				01AA80C5297A79BA005D89A6 /* Vikhliaev */,
 				01AA8095297A78E2005D89A6 /* AppDelegate.swift */,
 				01AA8097297A78E2005D89A6 /* SceneDelegate.swift */,
 				01AA8099297A78E2005D89A6 /* ViewController.swift */,
@@ -126,13 +125,6 @@
 				01AA80B8297A78E3005D89A6 /* BasicsOfSurvival_gitUITestsLaunchTests.swift */,
 			);
 			path = BasicsOfSurvival.gitUITests;
-			sourceTree = "<group>";
-		};
-		01AA80C5297A79BA005D89A6 /* Vikhliaev */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Vikhliaev;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
