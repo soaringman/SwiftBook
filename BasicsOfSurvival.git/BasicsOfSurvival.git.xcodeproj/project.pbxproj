@@ -13,6 +13,11 @@
 		01AA80AD297A78E3005D89A6 /* BasicsOfSurvival_gitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA80AC297A78E3005D89A6 /* BasicsOfSurvival_gitTests.swift */; };
 		01AA80B7297A78E3005D89A6 /* BasicsOfSurvival_gitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA80B6297A78E3005D89A6 /* BasicsOfSurvival_gitUITests.swift */; };
 		01AA80B9297A78E3005D89A6 /* BasicsOfSurvival_gitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA80B8297A78E3005D89A6 /* BasicsOfSurvival_gitUITestsLaunchTests.swift */; };
+		6389B05B2981559E009E1D7C /* PodcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389B05A2981559E009E1D7C /* PodcastViewModel.swift */; };
+		6389B05D298155BE009E1D7C /* PodcastSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389B05C298155BE009E1D7C /* PodcastSectionViewModel.swift */; };
+		6389B062298157AB009E1D7C /* PodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389B061298157AB009E1D7C /* PodcastCell.swift */; };
+		6389B06529815A5A009E1D7C /* PodcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389B06429815A5A009E1D7C /* PodcastView.swift */; };
+		6389B0672981626C009E1D7C /* PodcastCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389B0662981626C009E1D7C /* PodcastCellBuilder.swift */; };
 		7D8F0939297FC299007226D1 /* UICollectionView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0910297FC298007226D1 /* UICollectionView + Extension.swift */; };
 		7D8F093A297FC299007226D1 /* UITableView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0911297FC298007226D1 /* UITableView + Extension.swift */; };
 		7D8F093B297FC299007226D1 /* TVBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F0914297FC298007226D1 /* TVBaseCell.swift */; };
@@ -85,6 +90,11 @@
 		01AA80B2297A78E3005D89A6 /* BasicsOfSurvival.gitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicsOfSurvival.gitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01AA80B6297A78E3005D89A6 /* BasicsOfSurvival_gitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsOfSurvival_gitUITests.swift; sourceTree = "<group>"; };
 		01AA80B8297A78E3005D89A6 /* BasicsOfSurvival_gitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsOfSurvival_gitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6389B05A2981559E009E1D7C /* PodcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewModel.swift; sourceTree = "<group>"; };
+		6389B05C298155BE009E1D7C /* PodcastSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastSectionViewModel.swift; sourceTree = "<group>"; };
+		6389B061298157AB009E1D7C /* PodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCell.swift; sourceTree = "<group>"; };
+		6389B06429815A5A009E1D7C /* PodcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastView.swift; sourceTree = "<group>"; };
+		6389B0662981626C009E1D7C /* PodcastCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCellBuilder.swift; sourceTree = "<group>"; };
 		7D8F0910297FC298007226D1 /* UICollectionView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView + Extension.swift"; sourceTree = "<group>"; };
 		7D8F0911297FC298007226D1 /* UITableView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView + Extension.swift"; sourceTree = "<group>"; };
 		7D8F0914297FC298007226D1 /* TVBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVBaseCell.swift; sourceTree = "<group>"; };
@@ -200,6 +210,49 @@
 			path = BasicsOfSurvival.gitUITests;
 			sourceTree = "<group>";
 		};
+		6389B0592981556A009E1D7C /* Podcasts */ = {
+			isa = PBXGroup;
+			children = (
+				6389B05A2981559E009E1D7C /* PodcastViewModel.swift */,
+				6389B05C298155BE009E1D7C /* PodcastSectionViewModel.swift */,
+			);
+			path = Podcasts;
+			sourceTree = "<group>";
+		};
+		6389B05E29815727009E1D7C /* PodcastSection */ = {
+			isa = PBXGroup;
+			children = (
+				6389B05F29815759009E1D7C /* Cells */,
+				6389B06029815761009E1D7C /* Builders */,
+			);
+			path = PodcastSection;
+			sourceTree = "<group>";
+		};
+		6389B05F29815759009E1D7C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6389B061298157AB009E1D7C /* PodcastCell.swift */,
+				6389B063298159F0009E1D7C /* PodcastView */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6389B06029815761009E1D7C /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				6389B0662981626C009E1D7C /* PodcastCellBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		6389B063298159F0009E1D7C /* PodcastView */ = {
+			isa = PBXGroup;
+			children = (
+				6389B06429815A5A009E1D7C /* PodcastView.swift */,
+			);
+			path = PodcastView;
+			sourceTree = "<group>";
+		};
 		7D8F090F297FC298007226D1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +350,7 @@
 		7D8F0924297FC298007226D1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				6389B0592981556A009E1D7C /* Podcasts */,
 				7D8F098529807664007226D1 /* Card */,
 				7D8F09862980766D007226D1 /* MyCourses */,
 			);
@@ -406,6 +460,7 @@
 		7D8F0954297FC33D007226D1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6389B05E29815727009E1D7C /* PodcastSection */,
 				7D8F0955297FC34D007226D1 /* Controller */,
 				7D8F0937297FC299007226D1 /* Factory */,
 				7D8F0927297FC298007226D1 /* CardSection */,
@@ -676,6 +731,7 @@
 				7D8F09752980122D007226D1 /* MyCourseView.swift in Sources */,
 				7D8F098829807D63007226D1 /* BaseView.swift in Sources */,
 				7D8F097929801282007226D1 /* MyCourseCellBuilder.swift in Sources */,
+				6389B06529815A5A009E1D7C /* PodcastView.swift in Sources */,
 				7D8F093D297FC299007226D1 /* CVAdapter.swift in Sources */,
 				7D8F0963297FD45C007226D1 /* MainScreenAssembly.swift in Sources */,
 				7D8F096E29800D02007226D1 /* MyCourseViewModel.swift in Sources */,
@@ -686,14 +742,18 @@
 				7D8F0949297FC299007226D1 /* CardCell.swift in Sources */,
 				7D8F0943297FC299007226D1 /* TableViewSectionProtocols.swift in Sources */,
 				7D8F0946297FC299007226D1 /* CardSectionViewModel.swift in Sources */,
+				6389B05D298155BE009E1D7C /* PodcastSectionViewModel.swift in Sources */,
 				7D8F097B2980161F007226D1 /* AppConstants.swift in Sources */,
 				7D8F0980298063E3007226D1 /* TVSingleCellSectionConfigurator.swift in Sources */,
 				7D8F093F297FC299007226D1 /* TVSectionHeaderBuilder.swift in Sources */,
 				01AA8096297A78E2005D89A6 /* AppDelegate.swift in Sources */,
 				7D8F0948297FC299007226D1 /* TVSingleCell.swift in Sources */,
+				6389B0672981626C009E1D7C /* PodcastCellBuilder.swift in Sources */,
+				6389B062298157AB009E1D7C /* PodcastCell.swift in Sources */,
 				7D8F0940297FC299007226D1 /* HeaderSectionModel.swift in Sources */,
 				7D8F0957297FC36B007226D1 /* MainScreenViewController.swift in Sources */,
 				7D8F094C297FC299007226D1 /* PaddingLabel.swift in Sources */,
+				6389B05B2981559E009E1D7C /* PodcastViewModel.swift in Sources */,
 				7D8F094E297FC299007226D1 /* TVSingleCellBuilder.swift in Sources */,
 				7D8F0961297FD426007226D1 /* AppCoordinator.swift in Sources */,
 				7D8F094F297FC299007226D1 /* MainScreenFactory.swift in Sources */,
